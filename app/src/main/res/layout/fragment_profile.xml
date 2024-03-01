@@ -123,7 +123,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    //card view current password
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_currentPass"
         android:layout_width="match_parent"
@@ -194,7 +194,6 @@
 
     </androidx.cardview.widget.CardView>
 
-    //card view update password
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_updatePass"
         android:layout_width="match_parent"

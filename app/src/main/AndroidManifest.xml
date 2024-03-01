@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Rental_Room"
         tools:targetApi="31">
         <activity
-            android:name=".Model.ChangeEmailActivity.ChangeEmailActivity"
+            android:name=".SplashScreen.SplashScreenActivity"
             android:exported="false" />
         <activity
             android:name=".Fragment.FragmentProfile.ProfileFragment"
