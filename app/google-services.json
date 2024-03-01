@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "41074420495",
+    "project_id": "intershipraion",
+    "storage_bucket": "intershipraion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41074420495:android:dc383143a17ea8da79ec7a",
+        "android_client_info": {
+          "package_name": "www.smktelkommalang.sch.id.rental_room"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUU4e-wl-KVPZgbbubfgVEeQn-z5adVAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
