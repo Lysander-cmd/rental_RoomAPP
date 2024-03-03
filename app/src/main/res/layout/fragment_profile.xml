@@ -115,7 +115,7 @@
                 android:id="@+id/btn_logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/white"
                 android:text="Logout" />
 
         </LinearLayout>
