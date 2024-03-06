@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "41074420495",
+    "firebase_url": "https://intershipraion-default-rtdb.firebaseio.com",
     "project_id": "intershipraion",
     "storage_bucket": "intershipraion.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "www.smktelkommalang.sch.id.rental_room"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "41074420495-ko7c0psp8j2e5295hrl5ksdg4i44s0ko.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "www.smktelkommalang.sch.id.rental_room",
+            "certificate_hash": "a714777eca1ed2a3fa20cabb24e0f3eecede3b34"
+          }
+        },
+        {
+          "client_id": "41074420495-qr4hbuskg17s9hrj023h5fegsg3bj669.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCUU4e-wl-KVPZgbbubfgVEeQn-z5adVAc"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41074420495-qr4hbuskg17s9hrj023h5fegsg3bj669.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
