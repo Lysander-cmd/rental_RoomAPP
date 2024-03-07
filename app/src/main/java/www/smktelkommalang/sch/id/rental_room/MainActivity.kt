@@ -2,11 +2,11 @@ package www.smktelkommalang.sch.id.rental_room
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentTransaction
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
 import www.smktelkommalang.sch.id.rental_room.Fragment.Fragment.HomeFragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentProfile.ProfileFragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.TransactionFragment
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.FragmentTransaksiDalamProses.TransaksiDalamProsesFragment
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.TransaksiFragment
 //import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentProfile.ProfileFragment
 import www.smktelkommalang.sch.id.rental_room.databinding.ActivityMainBinding
 
@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
     private fun setupTab() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(HomeFragment(),"Home")
-        adapter.addFragment(HomeFragment(),"Ruangan")
-        adapter.addFragment(TransactionFragment(),"Transaksi")
+        adapter.addFragment(TransaksiDalamProsesFragment(),"Ruangan")
+        adapter.addFragment(TransaksiFragment(),"Transaksi")
         adapter.addFragment(ProfileFragment(),"Profile")
 
         binding.viewPager.adapter = adapter
