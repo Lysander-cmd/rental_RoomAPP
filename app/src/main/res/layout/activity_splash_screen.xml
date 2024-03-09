@@ -12,7 +12,7 @@
         android:id="@+id/iv_note"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:src="@drawable/Logo"
+        android:src="@drawable/logo"
         android:layout_centerInParent="true"
         />
 
