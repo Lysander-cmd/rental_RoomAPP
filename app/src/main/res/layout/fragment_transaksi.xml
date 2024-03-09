@@ -13,15 +13,35 @@
         android:layout_height="wrap_content"
         android:background="#3643FF">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="40dp"
-            android:text="Transaksi"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/candy_background_1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/candy_background_2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="Transaksi"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
@@ -36,6 +56,7 @@
             app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget">
 
         </com.google.android.material.tabs.TabLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

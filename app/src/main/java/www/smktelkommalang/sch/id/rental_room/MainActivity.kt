@@ -26,18 +26,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupTab() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(HomeFragment(),"Home")
-        adapter.addFragment(TransaksiDalamProsesFragment(),"Ruangan")
+        adapter.addFragment(HomeFragment(),"Beranda")
+        adapter.addFragment(HomeFragment(),"Ruangan")
         adapter.addFragment(TransaksiFragment(),"Transaksi")
         adapter.addFragment(ProfileFragment(),"Profile")
 
         binding.viewPager.adapter = adapter
         binding.tabs.setupWithViewPager(binding.viewPager)
 
-        binding.tabs.getTabAt(0)!!.setIcon(R.drawable.ic_home)
-        binding.tabs.getTabAt(1)!!.setIcon(R.drawable.ic_launcher_foreground)
-        binding.tabs.getTabAt(2)!!.setIcon(R.drawable.ic_launcher_foreground)
-        binding.tabs.getTabAt(3)!!.setIcon(R.drawable.ic_user)
+        binding.tabs.getTabAt(0)!!
+        binding.tabs.getTabAt(1)!!
+        binding.tabs.getTabAt(2)!!
+        binding.tabs.getTabAt(3)!!
+//            .setIcon(R.drawable.ic_user)
         
     }
 }
