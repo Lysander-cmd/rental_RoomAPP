@@ -28,7 +28,7 @@ class RegisterActivity : AppCompatActivity() {
         binding.btnRegister.setOnClickListener {
             val email = binding.edtEmailRegister.text.toString()
             val password = binding.edtPasswordRegister.text.toString()
-            val number = binding.edtNumberPhoneRegister.text.toString()
+            val confirmpassword = binding.edtConfirmPass.text.toString()
 
             //Validasi email
             if (email.isEmpty()) {
@@ -57,14 +57,13 @@ class RegisterActivity : AppCompatActivity() {
                 binding.edtPasswordRegister.requestFocus()
                 return@setOnClickListener
             }
-            //Validasi nomor telepon
-            if (email.isEmpty()) {
-                binding.edtNumberPhoneRegister.error = "Nomor Telepon Harus Diisi"
-                binding.edtNumberPhoneRegister.requestFocus()
+            if (confirmpassword != password){
+                binding.edtPasswordRegister.error = "Password Tidak sama"
+                binding.edtPasswordRegister.requestFocus()
                 return@setOnClickListener
             }
 
-            RegisterFirebase(email, password,number)
+            RegisterFirebase(email, password,confirmpassword)
         }
     }
 

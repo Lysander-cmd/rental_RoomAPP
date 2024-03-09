@@ -4,104 +4,160 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="@color/white"
     android:padding="30dp"
     tools:context=".Model.Login.LoginActivity">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="@color/white"
-        app:cardCornerRadius="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="30dp">
+            android:gravity="center">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:backgroundTint="@color/black"
-                android:text="Register"
+                android:text="ReservU"
                 android:textAlignment="center"
-                android:textColor="@color/teal_700"
-                android:textSize="24sp"
+                android:textColor="#3643FF"
+                android:textSize="32sp"
                 android:textStyle="bold" />
+        </LinearLayout>
 
-            <EditText
-                android:id="@+id/edt_email_register"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/black"
+            android:text="Selamat Datang"
+            android:textColor="#3341FF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Daftar ke akun untuk melanjutkan"
+            android:textColor="#95969D"
+            android:textSize="14sp"/>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <View
                 android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/sep_text"
+                android:background="#95969D" />
+
+            <TextView
+                android:id="@+id/sep_text"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Email"
-                android:inputType="textEmailAddress" />
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="casual"
+                android:textSize="11dp"
+                android:textColor="#95969D" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/sep_text"
+                android:background="#95969D" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edt_email_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/outline_border"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="#95969D" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/edt_password_register"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                android:inputType="textPassword" />
-            <EditText
-                android:id="@+id/edt_numberPhone_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Phone Number"
-                android:inputType="textPassword" />
+                android:layout_height="50dp"
+                android:background="@drawable/outline_border"
+                android:hint="Kata Sandi"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColorHint="#95969D" />
 
-<!--            <CheckBox-->
-<!--                android:id="@+id/isTeacher"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="0dp"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:text="Register As Admin"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/registerPhone" />-->
 
-<!--            <CheckBox-->
-<!--                android:id="@+id/isStudent"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:layout_marginEnd="16dp"-->
-<!--                android:text="Register as User"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/isTeacher"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/registerPhone" />-->
 
-            <Button
-                android:id="@+id/btn_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/teal_700"
-                android:text="Register" />
+
+        </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_confirmPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_border"
+        android:hint="Confirm Kata Sandi"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColorHint="#95969D"
+        android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#3643FF"
+            android:text="Daftar"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/black"
-                android:text="Already Have Account?"
-                android:textAlignment="center" />
+                android:text="Sudah memiliki akun?"
+                android:textAlignment="center"
+                android:textColor="#95969D" />
 
             <TextView
                 android:id="@+id/tv_to_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
                 android:backgroundTint="@color/black"
-                android:text="Login"
+                android:text="Masuk"
                 android:textAlignment="center"
-                android:textColor="@color/teal_700"
+                android:textColor="#3643FF"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
 
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 </RelativeLayout>
