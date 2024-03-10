@@ -27,6 +27,7 @@
                 <ImageView
                     android:importantForAutofill="yes"
                     android:id="@+id/gambarRuangan"
+                    android:scaleType="centerCrop"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:background="@color/cardview_dark_background"
