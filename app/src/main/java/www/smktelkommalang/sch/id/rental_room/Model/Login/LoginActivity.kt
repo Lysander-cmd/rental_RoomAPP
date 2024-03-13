@@ -6,6 +6,7 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import www.smktelkommalang.sch.id.rental_room.Database.Database
 import www.smktelkommalang.sch.id.rental_room.MainActivity
 import www.smktelkommalang.sch.id.rental_room.Model.Register.RegisterActivity
 import www.smktelkommalang.sch.id.rental_room.Model.ResetPassword.ResetPasswordActivity
