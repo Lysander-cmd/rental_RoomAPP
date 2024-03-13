@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                android:text="ReservU"
+                android:text="@string/app_name"
                 android:textAlignment="center"
                 android:textColor="#3643FF"
                 android:textSize="32sp"
