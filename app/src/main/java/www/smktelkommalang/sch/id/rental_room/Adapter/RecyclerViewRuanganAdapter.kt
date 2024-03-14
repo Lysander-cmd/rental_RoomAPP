@@ -1,5 +1,7 @@
 package www.smktelkommalang.sch.id.rental_room.Adapter
 
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentRuangan.RuanganFragment
+
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +10,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import www.smktelkommalang.sch.id.rental_room.Model.TrackTransaksi.TransaksiActivity
+import www.smktelkommalang.sch.id.rental_room.Model.Ruangan.RuanganData
 import www.smktelkommalang.sch.id.rental_room.R
 
-class RecyclerViewTransaksiAdapter(private val transaksiActivityList: ArrayList<TransaksiActivity>) :
-    RecyclerView.Adapter<RecyclerViewTransaksiAdapter.RuanganViewHolder>() {
+class RecyclerViewRuanganAdapter(private val getActivity: RuanganFragment, private val ruanganList: ArrayList<RuanganData>) :
+    RecyclerView.Adapter<RecyclerViewRuanganAdapter.RuanganViewHolder>() {
     class RuanganViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         /*
         ambil id" yg mau di ubah
@@ -38,14 +40,14 @@ class RecyclerViewTransaksiAdapter(private val transaksiActivityList: ArrayList<
     }
     
     override fun getItemCount(): Int {
-        return transaksiActivityList.size
+        return ruanganList.size
     }
     
     override fun onBindViewHolder(holder: RuanganViewHolder, position: Int) {
         /*
         bisa buka file TransaksiActivity utk lebih detailnya
          */
-        val ruangan = transaksiActivityList[position]
+        val ruangan = ruanganList[position]
         holder.imageView.setImageResource(ruangan.image)
         holder.titleTextView.text = ruangan.title
         holder.dateTextView.text = ruangan.date
@@ -63,36 +65,3 @@ class RecyclerViewTransaksiAdapter(private val transaksiActivityList: ArrayList<
         }
     }
 }
-
-
-//import android.view.LayoutInflater
-//import android.view.View
-//import android.view.ViewGroup
-//import android.widget.TextView
-//import androidx.recyclerview.widget.RecyclerView
-//
-//class FragmentRecyclerViewAdapter(private val fragmentTitleList: List<String>) :
-//    RecyclerView.Adapter<FragmentRecyclerViewAdapter.FragmentViewHolder>() {
-//
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FragmentViewHolder {
-//        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_fragment, parent, false)
-//        return FragmentViewHolder(view)
-//    }
-//
-//    override fun getItemCount(): Int {
-//        return fragmentTitleList.size
-//    }
-//
-//    override fun onBindViewHolder(holder: FragmentViewHolder, position: Int) {
-//        val title = fragmentTitleList[position]
-//        holder.bind(title)
-//    }
-//
-//    class FragmentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        private val titleTextView: TextView = itemView.findViewById(R.id.textViewTitle)
-//
-//        fun bind(title: String) {
-//            titleTextView.text = title
-//        }
-//    }
-//}
