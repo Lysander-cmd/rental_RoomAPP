@@ -3,7 +3,6 @@ package www.smktelkommalang.sch.id.rental_room.UI.Admin
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
-import www.smktelkommalang.sch.id.rental_room.Fragment.Fragment.HomeFragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentProfile.ProfileFragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.TransaksiFragment
 import www.smktelkommalang.sch.id.rental_room.databinding.ActivityMainBinding
@@ -21,7 +20,7 @@ class AdminScreen : AppCompatActivity() {
 
     private fun setupTab() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment((HomeFragmentAdmin),"Beranda")
+        adapter.addFragment((HomeFragmentAdmin()),"Beranda")
 
         binding.viewPager.adapter = adapter
         binding.tabs.setupWithViewPager(binding.viewPager)

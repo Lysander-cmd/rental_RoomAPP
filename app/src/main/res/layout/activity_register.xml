@@ -57,113 +57,90 @@
             android:textColor="#95969D"
             android:textSize="14sp" />
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:outlineSpotShadowColor="@color/white"
-            app:cardBackgroundColor="#D4E5E7"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="10dp"
+            app:strokeColor="#D4E5E7"
+            app:strokeWidth="1dp">
 
-            <androidx.cardview.widget.CardView
+            <EditText
+                android:id="@+id/edt_username"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
+                android:layout_height="50dp"
+                android:autofillHints="example@gmail.com"
                 android:background="@color/white"
-                app:cardCornerRadius="10dp">
+                android:hint="Nama"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColorHint="#95969D" />
 
-                <EditText
-                    android:id="@+id/edt_username"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@color/white"
-                    android:hint="Nama"
-                    android:inputType="textEmailAddress"
-                    android:padding="10dp"
-                    android:textColorHint="#95969D" />
-            </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:outlineSpotShadowColor="@color/white"
-            app:cardBackgroundColor="#D4E5E7"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="10dp"
+            app:strokeColor="#D4E5E7"
+            app:strokeWidth="1dp">
 
-            <androidx.cardview.widget.CardView
+            <EditText
+                android:id="@+id/edt_email_register"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
+                android:layout_height="50dp"
                 android:background="@color/white"
-                app:cardCornerRadius="10dp">
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColorHint="#95969D" />
 
-                <EditText
-                    android:id="@+id/edt_email_register"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@color/white"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:padding="10dp"
-                    android:textColorHint="#95969D" />
-            </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:outlineSpotShadowColor="@color/white"
-            app:cardBackgroundColor="#D4E5E7"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="10dp"
+            app:strokeColor="#D4E5E7"
+            app:strokeWidth="1dp">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:background="@color/white"
-                app:cardCornerRadius="10dp">
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/edt_password_register"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
                     android:background="@color/white"
                     android:hint="Kata Sandi"
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:textColorHint="#95969D" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/clarity_eye_hide_line" />
-            </androidx.cardview.widget.CardView>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:outlineSpotShadowColor="@color/white"
-            app:cardBackgroundColor="#D4E5E7"
-            app:cardCornerRadius="10dp">
+            app:cardCornerRadius="10dp"
+            app:strokeColor="#D4E5E7"
+            app:strokeWidth="1dp">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:background="@color/white"
-                app:cardCornerRadius="10dp">
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
 
                 <EditText
                     android:id="@+id/edt_confirm_pass"
@@ -174,16 +151,8 @@
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:textColorHint="#95969D" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|center"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/clarity_eye_hide_line" />
-            </androidx.cardview.widget.CardView>
-
-        </androidx.cardview.widget.CardView>
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -195,7 +164,7 @@
                 android:layout_height="wrap_content"
                 android:text="Dengan mendaftar, Anda menyetujui"
                 android:textColor="#95969D"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -213,14 +182,14 @@
                     android:layout_height="wrap_content"
                     android:text=" dan "
                     android:textColor="#95969D"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" Kebijakan privasi"
                     android:textColor="#3643FF"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
@@ -228,7 +197,7 @@
                 android:layout_height="wrap_content"
                 android:text="ReservU"
                 android:textColor="#95969D"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
