@@ -1,18 +1,14 @@
-package www.smktelkommalang.sch.id.rental_room
+package www.smktelkommalang.sch.id.rental_room.UI.Admin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
 import www.smktelkommalang.sch.id.rental_room.Fragment.Fragment.HomeFragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentProfile.ProfileFragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.TransaksiFragment
-//import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentProfile.ProfileFragment
 import www.smktelkommalang.sch.id.rental_room.databinding.ActivityMainBinding
 
-
-class MainActivity : AppCompatActivity() {
-
-
+class AdminScreen : AppCompatActivity() {
     lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,10 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupTab() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(HomeFragment(),"Beranda")
-        adapter.addFragment(HomeFragment(),"Ruangan")
-        adapter.addFragment(TransaksiFragment(),"Transaksi")
-        adapter.addFragment(ProfileFragment(),"Profile")
+        adapter.addFragment((HomeFragmentAdmin),"Beranda")
 
         binding.viewPager.adapter = adapter
         binding.tabs.setupWithViewPager(binding.viewPager)
@@ -38,6 +31,6 @@ class MainActivity : AppCompatActivity() {
         binding.tabs.getTabAt(2)!!
         binding.tabs.getTabAt(3)!!
 //            .setIcon(R.drawable.ic_user)
-        
+
     }
 }

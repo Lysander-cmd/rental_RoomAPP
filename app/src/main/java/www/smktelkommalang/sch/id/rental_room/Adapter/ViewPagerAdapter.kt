@@ -3,6 +3,7 @@ package www.smktelkommalang.sch.id.rental_room.Adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import www.smktelkommalang.sch.id.rental_room.UI.Admin.HomeFragmentAdmin
 
 class ViewPagerAdapter(supportFragmentManager: FragmentManager) :
     FragmentPagerAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
