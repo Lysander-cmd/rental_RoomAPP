@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewTransaksiAdapter
 import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewTransaksiAdmin
+import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewTransaksiAdminDone
 import www.smktelkommalang.sch.id.rental_room.Model.TrackTransaksi.TransaksiActivity
 import www.smktelkommalang.sch.id.rental_room.R
 
@@ -16,7 +17,7 @@ import www.smktelkommalang.sch.id.rental_room.R
 class TransaksiDoneFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var transaksiActivityList: ArrayList<TransaksiActivity>
-    private lateinit var recyclerViewTransaksiAdminAdapter: RecyclerViewTransaksiAdmin
+    private lateinit var recyclerViewTransaksiAdminAdapter: RecyclerViewTransaksiAdminDone
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +37,7 @@ class TransaksiDoneFragment : Fragment() {
                 "Peminjaman Gedung Kreativitas Mahasiswa 4.2",
                 "20 Oktober 2000",
                 "16.00 - 20.00",
-                "Dalam Proses"
+                "Detail"
             )
         )
         transaksiActivityList.add(
@@ -45,7 +46,7 @@ class TransaksiDoneFragment : Fragment() {
                 "Peminjaman Gedung Auditorium G2",
                 "20 Oktober 2000",
                 "16.00 - 20.00",
-                "Dalam Proses"
+                "Detail"
             )
         )
         transaksiActivityList.add(
@@ -54,11 +55,11 @@ class TransaksiDoneFragment : Fragment() {
                 "Peminjaman Gedung Kreativitas Mahasiswa 4.1",
                 "20 Oktober 2000",
                 "16.00 - 20.00",
-                "Dalam Proses"
+                "Detail"
             )
         )
 
-        recyclerViewTransaksiAdminAdapter = RecyclerViewTransaksiAdmin(transaksiActivityList)
+        recyclerViewTransaksiAdminAdapter = RecyclerViewTransaksiAdminDone(transaksiActivityList)
 
         recyclerView.adapter = recyclerViewTransaksiAdminAdapter
         return rootView

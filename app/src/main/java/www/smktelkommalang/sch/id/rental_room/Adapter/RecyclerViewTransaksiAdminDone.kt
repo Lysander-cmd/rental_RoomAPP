@@ -38,13 +38,13 @@ class RecyclerViewTransaksiAdminDone (private val transaksiAdminDoneActivityList
         }
 
         override fun onBindViewHolder(holder: TransaksiViewHolder, position: Int) {
-            /*
-            bisa buka file TransaksiActivity utk lebih detailnya
-             */
+
             val transaksi = transaksiAdminDoneActivityList[position]
             holder.imageView.setImageResource(transaksi.image)
             holder.titleTextView.text = transaksi.title
             holder.dateTextView.text = transaksi.date
             holder.timeTextView.text = transaksi.time
+            holder.btnAccept.text = transaksi.status
+
         }
 }
