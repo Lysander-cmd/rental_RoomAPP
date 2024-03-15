@@ -19,7 +19,6 @@ class RecyclerViewTransaksiAdminDone (private val transaksiAdminDoneActivityList
             val dateTextView: TextView = itemView.findViewById(R.id.tanggalPesanRuangan)
             val timeTextView: TextView = itemView.findViewById(R.id.jamPesanRuangan)
             val btnAccept: Button = itemView.findViewById(R.id.buttonAccept)
-
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransaksiViewHolder {
@@ -28,9 +27,7 @@ class RecyclerViewTransaksiAdminDone (private val transaksiAdminDoneActivityList
              */
 
             val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_transaksi_card_admin_done, parent, false)
-
             return TransaksiViewHolder(view)
-
         }
 
         override fun getItemCount(): Int {

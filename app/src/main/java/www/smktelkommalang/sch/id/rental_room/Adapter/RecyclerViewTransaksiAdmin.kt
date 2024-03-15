@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 import www.smktelkommalang.sch.id.rental_room.Model.TrackTransaksi.TransaksiActivity
 import www.smktelkommalang.sch.id.rental_room.R
 import www.smktelkommalang.sch.id.rental_room.UI.Admin.ActivityAdminScreen
@@ -21,8 +22,7 @@ class RecyclerViewTransaksiAdmin (private val transaksiAdminActivityList: ArrayL
         val titleTextView: TextView = itemView.findViewById(R.id.namaRuangan)
         val dateTextView: TextView = itemView.findViewById(R.id.tanggalPesanRuangan)
         val timeTextView: TextView = itemView.findViewById(R.id.jamPesanRuangan)
-        val btnAccept: Button = itemView.findViewById(R.id.buttonAccept)
-        val btnDecline: Button = itemView.findViewById(R.id.buttonDecline)
+        val statusTextView: TextView = itemView.findViewById(R.id.statusPesanan)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransaksiViewHolder {
@@ -49,5 +49,6 @@ class RecyclerViewTransaksiAdmin (private val transaksiAdminActivityList: ArrayL
         holder.titleTextView.text = transaksi.title
         holder.dateTextView.text = transaksi.date
         holder.timeTextView.text = transaksi.time
+        holder.statusTextView.text = transaksi.status
     }
 }

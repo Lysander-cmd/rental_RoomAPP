@@ -60,7 +60,6 @@ class TransaksiDoneFragment : Fragment() {
         )
 
         recyclerViewTransaksiAdminAdapter = RecyclerViewTransaksiAdminDone(transaksiActivityList)
-
         recyclerView.adapter = recyclerViewTransaksiAdminAdapter
         return rootView
     }
