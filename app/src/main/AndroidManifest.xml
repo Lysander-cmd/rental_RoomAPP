@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Rental_Room"
         tools:targetApi="31">
         <activity
+            android:name=".Fragment.FragmentOpening.OpeningActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentOpening.OpeningAppActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.Admin.ActivityAdminScreen"
             android:exported="false" />
         <activity
