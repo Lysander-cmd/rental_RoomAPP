@@ -10,6 +10,9 @@ import www.smktelkommalang.sch.id.rental_room.Database.Database
 import www.smktelkommalang.sch.id.rental_room.MainActivity
 import www.smktelkommalang.sch.id.rental_room.Model.Register.RegisterActivity
 import www.smktelkommalang.sch.id.rental_room.Model.ResetPassword.ResetPasswordActivity
+import www.smktelkommalang.sch.id.rental_room.UI.Admin.ActivityAdminScreen
+
+import www.smktelkommalang.sch.id.rental_room.UI.Admin.HomeFragmentAdmin
 import www.smktelkommalang.sch.id.rental_room.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -68,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
                     if (email == "admin@gmail.com") {
                         Toast.makeText(this, "Selamat datang $email", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, ActivityAdminScreen::class.java)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, "Selamat datang $email", Toast.LENGTH_SHORT).show()

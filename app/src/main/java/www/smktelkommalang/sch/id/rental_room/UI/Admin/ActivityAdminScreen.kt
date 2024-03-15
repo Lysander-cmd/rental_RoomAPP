@@ -1,18 +1,20 @@
 package www.smktelkommalang.sch.id.rental_room.UI.Admin
 
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentProfile.ProfileFragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.TransaksiFragment
-import www.smktelkommalang.sch.id.rental_room.databinding.ActivityMainBinding
+import www.smktelkommalang.sch.id.rental_room.R
+import www.smktelkommalang.sch.id.rental_room.databinding.ActivityAdminScreenBinding
 
-class AdminScreen : AppCompatActivity() {
-    lateinit var binding : ActivityMainBinding
+class ActivityAdminScreen : AppCompatActivity() {
+    lateinit var binding : ActivityAdminScreenBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityAdminScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupTab()
@@ -26,10 +28,8 @@ class AdminScreen : AppCompatActivity() {
         binding.tabs.setupWithViewPager(binding.viewPager)
 
         binding.tabs.getTabAt(0)!!
-        binding.tabs.getTabAt(1)!!
-        binding.tabs.getTabAt(2)!!
-        binding.tabs.getTabAt(3)!!
-//            .setIcon(R.drawable.ic_user)
+
+
 
     }
 }
