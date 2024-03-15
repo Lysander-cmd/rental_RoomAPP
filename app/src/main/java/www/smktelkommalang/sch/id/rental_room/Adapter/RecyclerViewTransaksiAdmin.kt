@@ -14,8 +14,8 @@ import www.smktelkommalang.sch.id.rental_room.R
 import www.smktelkommalang.sch.id.rental_room.UI.Admin.ActivityAdminScreen
 
 class RecyclerViewTransaksiAdmin (private val transaksiAdminActivityList: ArrayList<TransaksiActivity>) :
-    RecyclerView.Adapter<RecyclerViewTransaksiAdmin.RuanganViewHolder>() {
-    class RuanganViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    RecyclerView.Adapter<RecyclerViewTransaksiAdmin.TransaksiViewHolder>() {
+    class TransaksiViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val imageView: ImageView = itemView.findViewById(R.id.gambarRuangan)
         val titleTextView: TextView = itemView.findViewById(R.id.namaRuangan)
@@ -25,14 +25,14 @@ class RecyclerViewTransaksiAdmin (private val transaksiAdminActivityList: ArrayL
         val btnDecline: Button = itemView.findViewById(R.id.buttonDecline)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RuanganViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransaksiViewHolder {
         /*
         xml yang menjadi holder / container yg dibuat
          */
 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_transaksi_card_admin, parent, false)
 
-        return RuanganViewHolder(view)
+        return TransaksiViewHolder(view)
 
     }
 
@@ -40,7 +40,7 @@ class RecyclerViewTransaksiAdmin (private val transaksiAdminActivityList: ArrayL
         return transaksiAdminActivityList.size
     }
 
-    override fun onBindViewHolder(holder: RuanganViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TransaksiViewHolder, position: Int) {
         /*
         bisa buka file TransaksiActivity utk lebih detailnya
          */
