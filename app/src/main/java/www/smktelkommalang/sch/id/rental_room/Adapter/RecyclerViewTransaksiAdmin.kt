@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -20,9 +21,8 @@ class RecyclerViewTransaksiAdmin (private val transaksiAdminActivityList: ArrayL
         val titleTextView: TextView = itemView.findViewById(R.id.namaRuangan)
         val dateTextView: TextView = itemView.findViewById(R.id.tanggalPesanRuangan)
         val timeTextView: TextView = itemView.findViewById(R.id.jamPesanRuangan)
-        val statusTextView: TextView = itemView.findViewById(R.id.statusPesanan)
-        val cardColor: CardView = itemView.findViewById(R.id.cardViewStatusPesanan)
-        val textColor: TextView = itemView.findViewById(R.id.statusPesanan)
+        val btnAccept: Button = itemView.findViewById(R.id.buttonAccept)
+        val btnDecline: Button = itemView.findViewById(R.id.buttonDecline)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RuanganViewHolder {
@@ -49,16 +49,5 @@ class RecyclerViewTransaksiAdmin (private val transaksiAdminActivityList: ArrayL
         holder.titleTextView.text = transaksi.title
         holder.dateTextView.text = transaksi.date
         holder.timeTextView.text = transaksi.time
-        holder.statusTextView.text = transaksi.status
-        if (holder.statusTextView.text == "Disetujui") {
-            holder.cardColor.setCardBackgroundColor(Color.parseColor("#0ECC00"));
-            holder.textColor.setTextColor(Color.parseColor("#0ECC00"));
-        } else if (holder.statusTextView.text == "Tidak Disetujui") {
-            holder.cardColor.setCardBackgroundColor(Color.parseColor("#CC000E"));
-            holder.textColor.setTextColor(Color.parseColor("#CC000E"));
-        } else {
-            holder.cardColor.setCardBackgroundColor(Color.parseColor("#3643FF"));
-            holder.textColor.setTextColor(Color.parseColor("#3643FF"));
-        }
     }
 }
