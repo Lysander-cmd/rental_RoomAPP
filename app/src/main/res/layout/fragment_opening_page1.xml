@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.FragmentOpening.FragmentOpeningPage.OpeningPage1Fragment">
+    tools:context=".Fragment.FragmentOpening.OpeningPage1Fragment">
 
     <ImageView
         android:layout_width="380dp"

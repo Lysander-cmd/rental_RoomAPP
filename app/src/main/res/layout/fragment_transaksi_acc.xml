@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.FragmentTransaction.FragmentTransaksiDalamProses.TransaksiDalamProsesFragment">
+    tools:context=".Fragment.FragmentTransaksi.FragmentTransaksiProses.TransaksiDalamProsesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/transaksiDalamProses"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/fragment_transaksi_card_admin" />
+
 </LinearLayout>

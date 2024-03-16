@@ -1,4 +1,4 @@
-package www.smktelkommalang.sch.id.rental_room.Model.Register
+package www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.Register
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import www.smktelkommalang.sch.id.rental_room.Database.Database
-import www.smktelkommalang.sch.id.rental_room.Model.Login.LoginActivity
+import www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.Login.LoginActivity
 import www.smktelkommalang.sch.id.rental_room.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {

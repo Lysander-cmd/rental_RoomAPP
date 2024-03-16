@@ -1,4 +1,4 @@
-package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.FragmentTransaksiSelesai
+package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiSelesai
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewTransaksiAdapter
-import www.smktelkommalang.sch.id.rental_room.Model.TrackTransaksi.TransaksiActivity
+import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiActivity
 import www.smktelkommalang.sch.id.rental_room.R
 
 class TransaksiSelesaiFragment : Fragment() {

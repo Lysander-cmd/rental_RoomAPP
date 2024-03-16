@@ -6,17 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentRuangan.RuanganFragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.Admin.TransaksiAccFragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.Admin.TransaksiDoneFragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.FragmentTransaksiDalamProses.TransaksiDalamProsesFragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.FragmentTransaksiSelesai.TransaksiSelesaiFragment
-import www.smktelkommalang.sch.id.rental_room.R
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiAcc.TransaksiAccFragment
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiDone.TransaksiDoneFragment
 import www.smktelkommalang.sch.id.rental_room.databinding.FragmentHomeAdminBinding
-import www.smktelkommalang.sch.id.rental_room.databinding.FragmentHomeBinding
-import www.smktelkommalang.sch.id.rental_room.databinding.FragmentRuanganBinding
-import www.smktelkommalang.sch.id.rental_room.databinding.FragmentTransaksiAdmindoneBinding
-import www.smktelkommalang.sch.id.rental_room.databinding.FragmentTransaksiBinding
 
 
 class HomeFragmentAdmin : Fragment() {

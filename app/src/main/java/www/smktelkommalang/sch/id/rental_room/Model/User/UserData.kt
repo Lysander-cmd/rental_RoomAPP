@@ -1,4 +1,4 @@
-package www.smktelkommalang.sch.id.rental_room.Model
+package www.smktelkommalang.sch.id.rental_room.Model.User
 
 data class UserData (
     val nama: String= "",

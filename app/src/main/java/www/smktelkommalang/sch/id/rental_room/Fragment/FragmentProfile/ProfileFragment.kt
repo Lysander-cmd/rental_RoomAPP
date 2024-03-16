@@ -7,8 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.auth.FirebaseAuth
-import www.smktelkommalang.sch.id.rental_room.Model.Login.LoginActivity
-import www.smktelkommalang.sch.id.rental_room.R
+import www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.Login.LoginActivity
 import www.smktelkommalang.sch.id.rental_room.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {

@@ -1,4 +1,4 @@
-package www.smktelkommalang.sch.id.rental_room.Model.TrackTransaksi
+package www.smktelkommalang.sch.id.rental_room.Model.Transaksi
 
 data class TransaksiActivity(
     val image: Int,

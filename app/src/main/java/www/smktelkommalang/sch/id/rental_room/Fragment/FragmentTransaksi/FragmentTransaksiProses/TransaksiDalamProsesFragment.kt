@@ -1,4 +1,4 @@
-package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.FragmentTransaksiDalamProses
+package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiProses
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,11 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewTransaksiAdapter
-import www.smktelkommalang.sch.id.rental_room.Model.TrackTransaksi.TransaksiActivity
+import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiActivity
 import www.smktelkommalang.sch.id.rental_room.R
 
 class TransaksiDalamProsesFragment : Fragment() {
-    
     private lateinit var recyclerView: RecyclerView
     private lateinit var transaksiActivityList: ArrayList<TransaksiActivity>
     private lateinit var recyclerViewTransaksiAdapter: RecyclerViewTransaksiAdapter
@@ -29,9 +28,33 @@ class TransaksiDalamProsesFragment : Fragment() {
         
         transaksiActivityList = ArrayList()
         
-        transaksiActivityList.add(TransaksiActivity(R.drawable.dummy_ruangan_1, "Peminjaman Gedung Kreativitas Mahasiswa 4.2", "20 Oktober 2000", "16.00 - 20.00", "Dalam Proses"))
-        transaksiActivityList.add(TransaksiActivity(R.drawable.dummy_ruangan_2, "Peminjaman Gedung Auditorium G2", "20 Oktober 2000", "16.00 - 20.00", "Dalam Proses"))
-        transaksiActivityList.add(TransaksiActivity(R.drawable.dummy_ruangan_3, "Peminjaman Gedung Kreativitas Mahasiswa 4.1", "20 Oktober 2000", "16.00 - 20.00", "Dalam Proses"))
+        transaksiActivityList.add(
+            TransaksiActivity(
+                R.drawable.dummy_ruangan_1,
+                "Peminjaman Gedung Kreativitas Mahasiswa 4.2",
+                "20 Oktober 2000",
+                "16.00 - 20.00",
+                "Dalam Proses"
+            )
+        )
+        transaksiActivityList.add(
+            TransaksiActivity(
+                R.drawable.dummy_ruangan_2,
+                "Peminjaman Gedung Auditorium G2",
+                "20 Oktober 2000",
+                "16.00 - 20.00",
+                "Dalam Proses"
+            )
+        )
+        transaksiActivityList.add(
+            TransaksiActivity(
+                R.drawable.dummy_ruangan_3,
+                "Peminjaman Gedung Kreativitas Mahasiswa 4.1",
+                "20 Oktober 2000",
+                "16.00 - 20.00",
+                "Dalam Proses"
+            )
+        )
         
         recyclerViewTransaksiAdapter = RecyclerViewTransaksiAdapter(transaksiActivityList)
         

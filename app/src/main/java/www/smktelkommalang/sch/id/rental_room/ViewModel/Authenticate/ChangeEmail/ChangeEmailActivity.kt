@@ -1,4 +1,4 @@
-//package www.smktelkommalang.sch.id.rental_room.Model.ChangeEmailActivity
+package www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.ChangeEmail//package www.smktelkommalang.sch.id.rental_room.Model.ChangeEmailActivity
 //
 //import android.content.Intent
 //import android.os.Bundle

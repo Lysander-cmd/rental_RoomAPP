@@ -1,4 +1,4 @@
-package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction
+package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.FragmentTransaksiDalamProses.TransaksiDalamProsesFragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaction.FragmentTransaksiSelesai.TransaksiSelesaiFragment
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiProses.TransaksiDalamProsesFragment
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiSelesai.TransaksiSelesaiFragment
 import www.smktelkommalang.sch.id.rental_room.databinding.FragmentTransaksiBinding
 
 class TransaksiFragment : Fragment() {

@@ -13,16 +13,10 @@
         android:theme="@style/Theme.Rental_Room"
         tools:targetApi="31">
         <activity
-            android:name=".Fragment.FragmentOpening.OpeningActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Fragment.FragmentOpening.OpeningAppActivity"
+            android:name=".Model.Opening.OpeningActivity"
             android:exported="false" />
         <activity
             android:name=".UI.Admin.ActivityAdminScreen"
-            android:exported="false" />
-        <activity
-            android:name=".UI.Admin.AdminScreen"
             android:exported="false" />
         <activity
             android:name=".SplashScreen.SplashScreenActivity"
@@ -38,13 +32,13 @@
             android:name=".Fragment.FragmentProfile.ProfileFragment"
             android:exported="false" />
         <activity
-            android:name=".Model.ResetPassword.ResetPasswordActivity"
+            android:name=".ViewModel.Authenticate.ResetPassword.ResetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".Model.Register.RegisterActivity"
+            android:name=".ViewModel.Authenticate.Register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".Model.Login.LoginActivity"
+            android:name=".ViewModel.Authenticate.Login.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

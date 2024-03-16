@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import www.smktelkommalang.sch.id.rental_room.Model.TrackTransaksi.TransaksiActivity
+import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiActivity
 import www.smktelkommalang.sch.id.rental_room.R
 
 class RecyclerViewTransaksiAdapter(private val transaksiActivityList: ArrayList<TransaksiActivity>) :

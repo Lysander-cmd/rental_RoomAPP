@@ -1,4 +1,4 @@
-package www.smktelkommalang.sch.id.rental_room.Model.ResetPassword
+package www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.ResetPassword
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import www.smktelkommalang.sch.id.rental_room.Model.Login.LoginActivity
+import www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.Login.LoginActivity
 import www.smktelkommalang.sch.id.rental_room.databinding.ActivityResetPasswordBinding
 
 class ResetPasswordActivity : AppCompatActivity() {
