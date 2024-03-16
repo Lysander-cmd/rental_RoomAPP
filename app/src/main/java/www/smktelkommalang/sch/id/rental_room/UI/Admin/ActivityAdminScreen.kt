@@ -16,7 +16,6 @@ class ActivityAdminScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAdminScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setupTab()
     }
 
@@ -27,9 +26,6 @@ class ActivityAdminScreen : AppCompatActivity() {
         binding.viewPager.adapter = adapter
         binding.tabs.setupWithViewPager(binding.viewPager)
 
-        binding.tabs.getTabAt(0)!!
-
-
-
+        binding.tabs.getTabAt(0)
     }
 }

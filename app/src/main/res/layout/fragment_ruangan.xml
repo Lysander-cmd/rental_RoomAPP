@@ -5,11 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.FragmentRuangan.RuanganFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ruangan"
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/fragment_ruangan_card">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:columnCount="2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ruangan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/fragment_ruangan_card" />
+    </GridLayout>
 
 </LinearLayout>
