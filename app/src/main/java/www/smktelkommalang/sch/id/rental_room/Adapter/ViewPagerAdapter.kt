@@ -1,5 +1,6 @@
 package www.smktelkommalang.sch.id.rental_room.Adapter
 
+import android.app.Activity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -27,4 +28,5 @@ class ViewPagerAdapter(supportFragmentManager: FragmentManager) :
         FragmentList.add(fragment)
         FragmentTitleList.add(title)
     }
+
 }
