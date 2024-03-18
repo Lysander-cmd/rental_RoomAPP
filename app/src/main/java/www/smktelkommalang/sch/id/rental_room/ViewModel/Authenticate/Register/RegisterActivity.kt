@@ -6,14 +6,14 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import www.smktelkommalang.sch.id.rental_room.Database.Database
+import www.smktelkommalang.sch.id.rental_room.Database.UserDatabase
 import www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.Login.LoginActivity
 import www.smktelkommalang.sch.id.rental_room.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
     lateinit var  binding : ActivityRegisterBinding
     lateinit var auth : FirebaseAuth
-    val db = Database();
+    val db = UserDatabase();
     
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,7 +75,7 @@ class RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
-                    db.addUsername(username)
+                    db.createUsername(username)
                     Toast.makeText(this, "Register Berhasil", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)

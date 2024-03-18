@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewTransaksiAdapter
-import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiActivity
+import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 import www.smktelkommalang.sch.id.rental_room.R
 
 class TransaksiSelesaiFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var transaksiActivityList: ArrayList<TransaksiActivity>
+    private lateinit var transaksiDataList: ArrayList<TransaksiData>
     private lateinit var recyclerViewTransaksiAdapter: RecyclerViewTransaksiAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,12 +25,12 @@ class TransaksiSelesaiFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         
-        transaksiActivityList = ArrayList()
+        transaksiDataList = ArrayList()
         
-        transaksiActivityList.add(TransaksiActivity(R.drawable.dummy_ruangan_3, "Peminjaman Gedung Kreativitas Mahasiswa 4.1", "20 Oktober 2000", "16.00 - 20.00", "Disetujui"))
-        transaksiActivityList.add(TransaksiActivity(R.drawable.dummy_ruangan_2, "Peminjaman Gedung Auditorium G2", "20 Oktober 2000", "16.00 - 20.00", "Tidak Disetujui"))
+        transaksiDataList.add(TransaksiData(R.drawable.dummy_ruangan_3, "Peminjaman Gedung Kreativitas Mahasiswa 4.1", "20 Oktober 2000", "16.00 - 20.00", "Disetujui"))
+        transaksiDataList.add(TransaksiData(R.drawable.dummy_ruangan_2, "Peminjaman Gedung Auditorium G2", "20 Oktober 2000", "16.00 - 20.00", "Tidak Disetujui"))
         
-        recyclerViewTransaksiAdapter = RecyclerViewTransaksiAdapter(transaksiActivityList)
+        recyclerViewTransaksiAdapter = RecyclerViewTransaksiAdapter(transaksiDataList)
         
         recyclerView.adapter = recyclerViewTransaksiAdapter
         return rootView

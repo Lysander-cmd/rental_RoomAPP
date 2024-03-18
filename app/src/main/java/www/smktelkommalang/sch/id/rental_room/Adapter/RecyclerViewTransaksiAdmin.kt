@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiActivity
+import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 import www.smktelkommalang.sch.id.rental_room.R
 
-class RecyclerViewTransaksiAdmin(private val transaksiAdminActivityList: ArrayList<TransaksiActivity>) :
+class RecyclerViewTransaksiAdmin(private val transaksiAdminActivityList: ArrayList<TransaksiData>) :
     RecyclerView.Adapter<RecyclerViewTransaksiAdmin.TransaksiViewHolder>() {
     
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransaksiViewHolder {

@@ -1,6 +1,6 @@
 package www.smktelkommalang.sch.id.rental_room.Model.Transaksi
 
-data class TransaksiActivity(
+data class TransaksiData(
     val image: Int,
     val title: String,
     val date: String,

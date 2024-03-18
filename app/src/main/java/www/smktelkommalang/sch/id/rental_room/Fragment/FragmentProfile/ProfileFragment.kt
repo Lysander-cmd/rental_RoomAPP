@@ -7,40 +7,43 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.firebase.auth.FirebaseAuth
+import www.smktelkommalang.sch.id.rental_room.Database.UserDatabase
 import www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.Login.LoginActivity
 import www.smktelkommalang.sch.id.rental_room.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
-    private var _binding : FragmentProfileBinding? = null
-    lateinit var auth : FirebaseAuth
+    private var _binding: FragmentProfileBinding? = null
+    lateinit var auth: FirebaseAuth
+    private val userDatabase = UserDatabase()
     private val binding get() = _binding!!
-
-
+    
+    
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentProfileBinding.inflate(inflater,container,false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
-        }
-    override fun onDestroy(){
+    }
+    
+    override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
+    
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
-        val user = auth.currentUser
-
-        if (user != null) {
-            binding.edtName.setText(user.displayName.toString())
-            binding.edtEmail.setText(user.email.toString())
+        
+        if (auth.currentUser != null) {
+            userDatabase.readUsername(auth.currentUser?.uid.toString(), binding.edtName)
+            binding.edtEmail.text = auth.currentUser?.email
         }
-            binding.btnLogout.setOnClickListener(){
-                btnLogout()
-            }
+        binding.btnLogout.setOnClickListener() {
+            btnLogout()
+        }
     }
-
+    
     private fun btnLogout() {
         auth = FirebaseAuth.getInstance()
         auth.signOut()
@@ -48,5 +51,5 @@ class ProfileFragment : Fragment() {
         startActivity(intent)
         activity?.finish()
     }
-
+    
 }

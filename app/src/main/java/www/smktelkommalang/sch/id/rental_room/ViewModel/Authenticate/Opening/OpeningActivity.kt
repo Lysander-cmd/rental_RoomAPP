@@ -33,9 +33,10 @@ class OpeningActivity : AppCompatActivity() {
         val dotsIndicator = binding.dotsIndicator
         val adapter = ViewPagerAdapter(supportFragmentManager)
         
-        adapter.addFragment(OpeningPage1Fragment(), "Dalam Proses")
-        adapter.addFragment(OpeningPage2Fragment(), "Dalam Proses")
-        adapter.addFragment(OpeningPage3Fragment(), "Dalam Proses")
+        adapter.addFragment(OpeningPage1Fragment(), "1st")
+        adapter.addFragment(OpeningPage2Fragment(), "2nd")
+        adapter.addFragment(OpeningPage3Fragment(), "3rd")
+        
         viewPager.adapter = adapter
         dotsIndicator.setViewPager(viewPager)
         

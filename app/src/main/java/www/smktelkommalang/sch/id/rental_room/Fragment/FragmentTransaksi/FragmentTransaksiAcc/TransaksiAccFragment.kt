@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewTransaksiAdmin
-import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiActivity
+import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 import www.smktelkommalang.sch.id.rental_room.R
 
 
 class TransaksiAccFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var transaksiActivityList: ArrayList<TransaksiActivity>
+    private lateinit var transaksiDataList: ArrayList<TransaksiData>
     private lateinit var recyclerViewTransaksiAdminAdapter: RecyclerViewTransaksiAdmin
 
     override fun onCreateView(
@@ -27,10 +27,10 @@ class TransaksiAccFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        transaksiActivityList = ArrayList()
+        transaksiDataList = ArrayList()
 
-        transaksiActivityList.add(
-            TransaksiActivity(
+        transaksiDataList.add(
+            TransaksiData(
                 R.drawable.dummy_ruangan_1,
                 "Peminjaman Gedung Kreativitas Mahasiswa 4.2",
                 "20 Oktober 2000",
@@ -38,8 +38,8 @@ class TransaksiAccFragment : Fragment() {
                 "Dalam Proses"
             )
         )
-        transaksiActivityList.add(
-            TransaksiActivity(
+        transaksiDataList.add(
+            TransaksiData(
                 R.drawable.dummy_ruangan_2,
                 "Peminjaman Gedung Auditorium G2",
                 "20 Oktober 2000",
@@ -47,8 +47,8 @@ class TransaksiAccFragment : Fragment() {
                 "Dalam Proses"
             )
         )
-        transaksiActivityList.add(
-            TransaksiActivity(
+        transaksiDataList.add(
+            TransaksiData(
                 R.drawable.dummy_ruangan_3,
                 "Peminjaman Gedung Kreativitas Mahasiswa 4.1",
                 "20 Oktober 2000",
@@ -57,7 +57,7 @@ class TransaksiAccFragment : Fragment() {
             )
         )
 
-        recyclerViewTransaksiAdminAdapter = RecyclerViewTransaksiAdmin(transaksiActivityList)
+        recyclerViewTransaksiAdminAdapter = RecyclerViewTransaksiAdmin(transaksiDataList)
         recyclerView.adapter = recyclerViewTransaksiAdminAdapter
         return rootView
     }
