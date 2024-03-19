@@ -31,6 +31,7 @@ class TransaksiDalamProsesFragment() : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         
         transaksiDatabase = TransaksiDatabase()
+        auth = FirebaseAuth.getInstance()
         transaksiDatabase.getTransaksiData(userId = auth.currentUser?.uid.toString(), transaksiDataList)
         
         recyclerViewTransaksiAdapter = RecyclerViewTransaksiAdapter(transaksiDataList)
