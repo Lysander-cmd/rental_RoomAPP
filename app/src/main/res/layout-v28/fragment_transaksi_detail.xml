@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="30dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="yes"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tranTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="80dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Peminjaman"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tranDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tranTitle"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="80dp"
+            android:drawablePadding="5dp"
+            android:text="28 Oktober 2023"
+            app:drawableStartCompat="@drawable/outline_calendar_today" />
+
+        <TextView
+            android:id="@+id/tranTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tranDate"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="80dp"
+            android:drawablePadding="5dp"
+            android:text="16.00 -- 20.00"
+            app:drawableStartCompat="@drawable/clock"
+            app:drawableTint="@color/grey_cacace" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="50dp"
+            app:strokeColor="@color/blue_3643FF"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/tranStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:text="status"
+                android:textColor="@color/blue_3643FF" />
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        app:dividerColor="@color/grey_cacace" />
+
+</LinearLayout>

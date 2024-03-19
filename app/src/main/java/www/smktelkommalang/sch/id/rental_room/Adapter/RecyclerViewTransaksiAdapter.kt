@@ -10,32 +10,22 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 import www.smktelkommalang.sch.id.rental_room.R
-import java.util.Base64
 
-class RecyclerViewTransaksiAdapter(private val transaksiDataList: ArrayList<TransaksiData>) :
-    RecyclerView.Adapter<RecyclerViewTransaksiAdapter.RuanganViewHolder>() {
+class RecyclerViewTransaksiAdapter(private val transaksiDataList: ArrayList<TransaksiData>) : RecyclerView.Adapter<RecyclerViewTransaksiAdapter.RuanganViewHolder>() {
+    
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RuanganViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_transaksi_card, parent, false)
+        return RuanganViewHolder(view)
+    }
+    
     class RuanganViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        /*
-        ambil id" yg mau di ubah
-         */
         val imageView: ImageView = itemView.findViewById(R.id.gambarRuangan)
         val titleTextView: TextView = itemView.findViewById(R.id.namaRuangan)
         val dateTextView: TextView = itemView.findViewById(R.id.tanggalPesanRuangan)
         val timeTextView: TextView = itemView.findViewById(R.id.jamPesanRuangan)
         val statusTextView: TextView = itemView.findViewById(R.id.statusPesanan)
-        val cardColor: CardView = itemView.findViewById(R.id.cardViewStatusPesanan)
         val textColor: TextView = itemView.findViewById(R.id.statusPesanan)
-    }
-    
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RuanganViewHolder {
-        /*
-        xml yang menjadi holder / container yg dibuat
-         */
-        
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_transaksi_card, parent, false)
-        
-        return RuanganViewHolder(view)
-        
+        val cardColor: CardView = itemView.findViewById(R.id.cardViewStatusPesanan)
     }
     
     override fun getItemCount(): Int {
@@ -43,15 +33,12 @@ class RecyclerViewTransaksiAdapter(private val transaksiDataList: ArrayList<Tran
     }
     
     override fun onBindViewHolder(holder: RuanganViewHolder, position: Int) {
-        /*
-        bisa buka file TransaksiActivity utk lebih detailnya
-         */
-        val ruangan = transaksiDataList[position]
-        holder.imageView.setImageResource(ruangan.image)
-        holder.titleTextView.text = ruangan.title
-        holder.dateTextView.text = ruangan.date
-        holder.timeTextView.text = ruangan.time
-        holder.statusTextView.text = ruangan.status
+        val transaksi = transaksiDataList[position]
+        transaksi.image?.let { holder.imageView.setImageResource(it) }
+        holder.titleTextView.text = transaksi.title
+        holder.dateTextView.text = transaksi.date
+        holder.timeTextView.text = transaksi.time
+        holder.statusTextView.text = transaksi.status
         if (holder.statusTextView.text == "Disetujui") {
             holder.cardColor.setCardBackgroundColor(Color.parseColor("#0ECC00"));
             holder.textColor.setTextColor(Color.parseColor("#0ECC00"));

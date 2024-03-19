@@ -32,7 +32,7 @@ class RecyclerViewTransaksiAdminDone(private val transaksiAdminDoneActivityList:
     
     override fun onBindViewHolder(holder: TransaksiViewHolder, position: Int) {
         val transaksi = transaksiAdminDoneActivityList[position]
-        holder.imageView.setImageResource(transaksi.image)
+        transaksi.image?.let { holder.imageView.setImageResource(it) }
         holder.titleTextView.text = transaksi.title
         holder.dateTextView.text = transaksi.date
         holder.timeTextView.text = transaksi.time
