@@ -173,11 +173,12 @@
                 app:cardCornerRadius="30dp"
                 app:strokeWidth = "1dp"
                 app:strokeColor="@color/purple_700">
+
                 <ImageView
-                    android:layout_width="match_parent"
+                    android:layout_width="94dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:src="@drawable/mic"/>
+                    android:src="@drawable/mic" />
 
 
             </androidx.cardview.widget.CardView>
@@ -200,7 +201,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Book Now" />
+        android:color = "@color/blue_3643FF"
+        android:text="Ajukan Peminjaman" />
 
     </LinearLayout>
     </ScrollView>
