@@ -7,16 +7,18 @@ import com.google.firebase.database.FirebaseDatabase
 
 class UserDatabase {
     private var auth = FirebaseAuth.getInstance()
-    private var db: DatabaseReference = FirebaseDatabase.getInstance().reference
+    private lateinit var db: DatabaseReference
     
     fun createUsername(username: String) {
+        db =  FirebaseDatabase.getInstance().reference
         db.child("users").child(auth.currentUser?.uid.toString()).child("username")
             .setValue(username)
     }
     
     fun readUsername(userId: String, textView: TextView) {
-        db = db.child("users")
-        db.child(userId).get().addOnSuccessListener {
+        db  = FirebaseDatabase.getInstance().reference
+        val transaksiRef = db.child("users")
+        transaksiRef.child(userId).get().addOnSuccessListener {
             if (it.exists()) {
                 val username = it.child("username").value
                 textView.text = username.toString()
