@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 import www.smktelkommalang.sch.id.rental_room.R
 
@@ -32,7 +33,9 @@ class RecyclerViewTransaksiAdminDone(private val transaksiAdminDoneActivityList:
     
     override fun onBindViewHolder(holder: TransaksiViewHolder, position: Int) {
         val transaksi = transaksiAdminDoneActivityList[position]
-        transaksi.image?.let { holder.imageView.setImageResource(it) }
+        
+        Glide.with(holder.imageView.context).load(transaksi.image).error(R.drawable.logo)
+            .into(holder.imageView)
         holder.titleTextView.text = transaksi.title
         holder.dateTextView.text = transaksi.date
         holder.timeTextView.text = transaksi.time

@@ -31,7 +31,7 @@ class TransaksiAccFragment : Fragment() {
 
         transaksiDataList.add(
             TransaksiData(
-                R.drawable.dummy_ruangan_1,
+                "",
                 "Peminjaman Gedung Kreativitas Mahasiswa 4.2",
                 "20 Oktober 2000",
                 "16.00 - 20.00",
@@ -40,7 +40,7 @@ class TransaksiAccFragment : Fragment() {
         )
         transaksiDataList.add(
             TransaksiData(
-                R.drawable.dummy_ruangan_2,
+                "",
                 "Peminjaman Gedung Auditorium G2",
                 "20 Oktober 2000",
                 "16.00 - 20.00",
@@ -49,7 +49,7 @@ class TransaksiAccFragment : Fragment() {
         )
         transaksiDataList.add(
             TransaksiData(
-                R.drawable.dummy_ruangan_3,
+                "",
                 "Peminjaman Gedung Kreativitas Mahasiswa 4.1",
                 "20 Oktober 2000",
                 "16.00 - 20.00",
