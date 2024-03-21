@@ -1,275 +1,429 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="30dp"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".Fragment.FragmentTransaksi.FragmentTransaksiDetail.TransaksiDetailFragment">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_3643FF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/candy_background_1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-50dp"
+                android:background="@drawable/candy_background_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Detail Peminjaman"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/mdi_arrow_left_drop_circle_outline" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp">
+            android:layout_marginHorizontal="30dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:outlineAmbientShadowColor="@android:color/transparent"
-                android:outlineSpotShadowColor="@android:color/transparent"
-                app:cardBackgroundColor="@android:color/transparent"
-                app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:importantForAccessibility="no"
-                    android:importantForAutofill="yes"
-                    android:scaleType="centerCrop" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
 
-            </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:outlineAmbientShadowColor="@android:color/transparent"
+                        android:outlineSpotShadowColor="@android:color/transparent"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="10dp">
 
-            <TextView
-                android:id="@+id/tranTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="80dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Peminjaman"
-                android:textColor="@color/black" />
+                        <ImageView
+                            android:id="@+id/imageDetail"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:importantForAccessibility="no"
+                            android:importantForAutofill="yes"
+                            android:scaleType="centerCrop" />
 
-            <TextView
-                android:id="@+id/tranDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranTitle"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="80dp"
-                android:drawablePadding="5dp"
-                android:text="28 Oktober 2023"
-                app:drawableStartCompat="@drawable/outline_calendar_today" />
+                    </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/tranTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranDate"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="80dp"
-                android:drawablePadding="5dp"
-                android:text="16.00 -- 20.00"
-                app:drawableStartCompat="@drawable/clock"
-                app:drawableTint="@color/grey_cacace" />
+                    <TextView
+                        android:id="@+id/tranTitleDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="100dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Peminjaman"
+                        android:textColor="@color/black" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="50dp"
-                app:cardCornerRadius="50dp"
-                app:strokeColor="@color/blue_3643FF"
-                app:strokeWidth="1dp">
+                    <TextView
+                        android:id="@+id/tranDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranTitleDetail"
+                        android:layout_marginVertical="5dp"
+                        android:layout_marginStart="100dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="28 Oktober 2023"
+                        android:textColor="#95969D"
+                        app:drawableStartCompat="@drawable/outline_calendar_today" />
+
+                    <TextView
+                        android:id="@+id/tranTimeDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranDate"
+                        android:layout_marginStart="100dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="16.00 - 20.00"
+                        android:textColor="#95969D"
+                        app:drawableStartCompat="@drawable/clock" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranDate"
+                        android:layout_alignParentEnd="true"
+                        app:cardCornerRadius="50dp"
+                        app:strokeColor="@null"
+                        app:strokeWidth="1dp">
+
+                        <TextView
+                            android:id="@+id/tranStatusDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:text="status"
+                            android:textColor="@null" />
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:dividerColor="@color/grey_cacace" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="No. Peminjaman" />
+
+                    <TextView
+                        android:id="@+id/tranResi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Resi"
+                        android:textColor="@color/blue_3643FF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranNoPeminjaman"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Waktu Transaksi" />
+
+                    <TextView
+                        android:id="@+id/tranDateDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranResi"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="tanggal"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:dividerColor="@color/grey_cacace" />
 
                 <TextView
-                    android:id="@+id/tranStatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="10dp"
-                    android:text="status"
-                    android:textColor="@color/blue_3643FF" />
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Detail Peminjaman"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Nama Peminjam" />
+
+                    <TextView
+                        android:id="@+id/tranNamaPeminjam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="username"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranNamaPeminjam"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Nama Ruang" />
+
+                    <TextView
+                        android:id="@+id/tranNamaRuang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranNamaPeminjam"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Gedung"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranNamaRuang"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Keperluan Peminjaman" />
+
+                    <TextView
+                        android:id="@+id/tranKeperluan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranNamaRuang"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Upgrading BEM FTP 2024"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranKeperluan"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Waktu Peminjaman" />
+
+                    <TextView
+                        android:id="@+id/tranWaktu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranKeperluan"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Waktu"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranWaktu"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Durasi Peminjaman" />
+
+                    <TextView
+                        android:id="@+id/tranDurasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranWaktu"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Durasi"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    app:dividerColor="@color/grey_cacace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Detail Pembayaran"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Waktu Pembayaran" />
+
+                    <TextView
+                        android:id="@+id/tranWaktuBayar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Waktu Pembayaran"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranMetodeBayar"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Biaya Peminjaman" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranWaktuBayar"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Metode Pembayaran" />
+
+                    <TextView
+                        android:id="@+id/tranMetodeBayar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranWaktuBayar"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Metode Bayar"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tranBiayaPinjam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranMetodeBayar"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Biaya Pinjam"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranBiayaPinjam"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Biaya Admin" />
+
+                    <TextView
+                        android:id="@+id/tranBiayaAdmin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranBiayaPinjam"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Biaya Admin"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranBiayaAdmin"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Total Pembayaran" />
+
+                    <TextView
+                        android:id="@+id/tranTotalBayar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tranBiayaAdmin"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Total Pembayaran"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                app:cardBackgroundColor="#CC000E"
+                app:cardCornerRadius="100dp">
+
+                <TextView
+                    android:id="@+id/btnBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Batalkan Pesanan"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
             </com.google.android.material.card.MaterialCardView>
         </RelativeLayout>
-
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            app:dividerColor="@color/grey_cacace" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:fontFamily="@font/poppins"
-                android:text="No. Peminjaman" />
-
-            <TextView
-                android:id="@+id/tranNoPeminjaman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Resi"
-                android:textColor="@color/blue_3643FF" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranNoPeminjaman"
-                android:layout_alignParentStart="true"
-                android:fontFamily="@font/poppins"
-                android:text="Waktu Transaksi" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranNoPeminjaman"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/poppins"
-                android:text="28 September 2024"
-                android:textColor="@color/black" />
-        </RelativeLayout>
-
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            app:dividerColor="@color/grey_cacace" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Detail Peminjaman"
-            android:textColor="@color/black" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:fontFamily="@font/poppins"
-                android:text="Nama Peminjam" />
-
-            <TextView
-                android:id="@+id/tranNamaPeminjam"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Resi"
-                android:textColor="@color/blue_3643FF" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranNamaPeminjam"
-                android:layout_alignParentStart="true"
-                android:fontFamily="@font/poppins"
-                android:text="Nama Ruang" />
-
-            <TextView
-                android:id="@+id/tranNamaRuang"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranNamaPeminjam"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/poppins"
-                android:text="28 September 2024"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranNamaRuang"
-                android:layout_alignParentStart="true"
-                android:fontFamily="@font/poppins"
-                android:text="Keperluan Peminjaman" />
-
-            <TextView
-                android:id="@+id/tranKeperluan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranNamaRuang"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/poppins"
-                android:text="Upgrading BEM FTP 2024"
-                android:textColor="@color/black" />
-        </RelativeLayout>
-
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            app:dividerColor="@color/grey_cacace" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Detail Pembayaran"
-            android:textColor="@color/black" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:fontFamily="@font/poppins"
-                android:text="Waktu Pembayaran" />
-
-            <TextView
-                android:id="@+id/tranWaktuBayar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Resi"
-                android:textColor="@color/blue_3643FF" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranWaktuBayar"
-                android:layout_alignParentStart="true"
-                android:fontFamily="@font/poppins"
-                android:text="Waktu Transaksi" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tranWaktuBayar"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/poppins"
-                android:text="28 September 2024"
-                android:textColor="@color/black" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        app:cardBackgroundColor="@color/red"
-        app:cardCornerRadius="100dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center"
-            android:text="Batalkan Pesanan"
-            android:textColor="@color/white" />
-    </com.google.android.material.card.MaterialCardView>
-</RelativeLayout>
+    </ScrollView>
+</LinearLayout>

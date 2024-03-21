@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -28,6 +29,7 @@ class RecyclerViewTransaksiAdapter(private val transaksiDataList: ArrayList<Tran
         val statusTextView: TextView = itemView.findViewById(R.id.statusPesanan)
         val textColor: TextView = itemView.findViewById(R.id.statusPesanan)
         val cardColor: MaterialCardView = itemView.findViewById(R.id.cardViewStatusPesanan)
+        val transaksiCard: CardView = itemView.findViewById(R.id.transaksi_card)
     }
     
     override fun getItemCount(): Int {
@@ -59,6 +61,11 @@ class RecyclerViewTransaksiAdapter(private val transaksiDataList: ArrayList<Tran
                 holder.cardColor.strokeColor = Color.parseColor("#3643FF")
                 holder.textColor.setTextColor(Color.parseColor("#3643FF"))
             }
+        }
+        
+        val cont = holder.transaksiCard.context
+        holder.transaksiCard.setOnClickListener{
+            Toast.makeText(cont, "The item ${transaksi.title} is clicked", Toast.LENGTH_SHORT).show()
         }
     }
 }

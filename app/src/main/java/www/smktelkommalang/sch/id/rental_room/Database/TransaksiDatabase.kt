@@ -87,4 +87,43 @@ class TransaksiDatabase {
             }
         })
     }
+    
+    fun getTransaksiDataDetail(
+        userId: String,
+        state: Array<String>,
+        resp: (ArrayList<TransaksiData>) -> Unit,
+    ) {
+        db = FirebaseDatabase.getInstance().reference
+        val transaksiRef = db.child("transaksi").child(userId)
+        transaksiRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val transaksiDataList = ArrayList<TransaksiData>()
+                if (snapshot.exists()) {
+                    for (dataSnapshot in snapshot.children) {
+                        val status: String =
+                            dataSnapshot.child("status").getValue(String::class.java).toString()
+                        if (status in state) {
+                            val title: String =
+                                dataSnapshot.child("title").getValue(String::class.java).toString()
+                            val date: String =
+                                dataSnapshot.child("date").getValue(String::class.java).toString()
+                            val time: String =
+                                dataSnapshot.child("time").getValue(String::class.java).toString()
+                            val image: String =
+                                dataSnapshot.child("image").getValue(String::class.java).toString()
+                            
+                            val transaksiData =
+                                TransaksiData(title, date, time, status, image)
+                            transaksiDataList.add(transaksiData)
+                        }
+                    }
+                }
+                resp(transaksiDataList)
+            }
+            
+            override fun onCancelled(error: DatabaseError) {
+                println("Error: ${error.message}")
+            }
+        })
+    }
 }

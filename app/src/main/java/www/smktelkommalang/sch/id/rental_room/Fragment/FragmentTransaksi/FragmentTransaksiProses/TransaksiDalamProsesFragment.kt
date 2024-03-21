@@ -44,7 +44,7 @@ class TransaksiDalamProsesFragment : Fragment() {
     
     private fun readDataFromFirebase() {
         val userId = auth.currentUser?.uid.toString()
-        transaksiDatabase.getTransaksiData(userId, arrayOf("Dalam proses")) { dataList ->
+        transaksiDatabase.getTransaksiData(userId, arrayOf("Dalam Proses")) { dataList ->
             transaksiDataList.clear()
             transaksiDataList.addAll(dataList)
             recyclerViewTransaksiAdapter.notifyDataSetChanged()
