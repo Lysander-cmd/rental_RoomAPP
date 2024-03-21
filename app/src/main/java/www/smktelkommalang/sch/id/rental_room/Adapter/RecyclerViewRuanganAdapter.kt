@@ -19,7 +19,7 @@ RecyclerView.Adapter<RecyclerViewRuanganAdapter.RuanganViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RuanganViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(www.smktelkommalang.sch.id.rental_room.R.layout.fragment_ruangan_card, parent, false)
+            .inflate(www.smktelkommalang.sch.id.rental_room.R.layout.fragment_ruangan, parent, false)
         return RuanganViewHolder(view)
     }
 
