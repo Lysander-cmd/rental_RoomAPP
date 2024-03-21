@@ -201,6 +201,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:color = "@color/blue_3643FF"
+        android:background="@color/blue_3643FF"
         android:text="Ajukan Peminjaman" />
 
     </LinearLayout>

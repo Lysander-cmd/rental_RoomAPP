@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import www.smktelkommalang.sch.id.rental_room.Model.Ruangan.RuanganData
-
+import www.smktelkommalang.sch.id.rental_room.R
 
 
 class RecyclerViewRuanganAdapter(
@@ -25,7 +26,10 @@ RecyclerView.Adapter<RecyclerViewRuanganAdapter.RuanganViewHolder>() {
 
     override fun onBindViewHolder(holder: RuanganViewHolder, position: Int) {
         val ruangan = RuanganList[position]
-        holder.imageView.setImageResource(ruangan.image)
+        Glide.with(holder.itemView.context.applicationContext)
+            .load(ruangan.image)
+            .placeholder(R.drawable.logo)
+            .into(holder.imageView)
         holder.titleTextView.text = ruangan.title
         holder.kapasitasTextView.text = ruangan.kapasitas
         holder.ukuranTextView.text = ruangan.ukuran
