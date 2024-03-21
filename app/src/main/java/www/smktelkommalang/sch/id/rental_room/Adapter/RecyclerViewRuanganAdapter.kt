@@ -13,17 +13,17 @@ import www.smktelkommalang.sch.id.rental_room.R
 
 
 class RecyclerViewRuanganAdapter(
-    private val getActivity: Context,
-    private val RuanganList: List<RuanganData>) :
-RecyclerView.Adapter<RecyclerViewRuanganAdapter.RuanganViewHolder>() {
-
-
+    private val RuanganList: List<RuanganData>,
+) :
+    RecyclerView.Adapter<RecyclerViewRuanganAdapter.RuanganViewHolder>() {
+    
+    
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RuanganViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(www.smktelkommalang.sch.id.rental_room.R.layout.fragment_ruangan, parent, false)
+            .inflate(R.layout.fragment_ruangan_card, parent, false)
         return RuanganViewHolder(view)
     }
-
+    
     override fun onBindViewHolder(holder: RuanganViewHolder, position: Int) {
         val ruangan = RuanganList[position]
         Glide.with(holder.itemView.context.applicationContext)
@@ -38,15 +38,19 @@ RecyclerView.Adapter<RecyclerViewRuanganAdapter.RuanganViewHolder>() {
 //            Toast.makeText(getActivity, RuanganList[position].title, Toast.LENGTH_LONG).show()
 //        }
     }
-
+    
     override fun getItemCount(): Int {
         return RuanganList.size
     }
-
+    
     class RuanganViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(www.smktelkommalang.sch.id.rental_room.R.id.gambarRuangan)
-        val titleTextView: TextView = itemView.findViewById(www.smktelkommalang.sch.id.rental_room.R.id.titleRuangan)
-        val kapasitasTextView: TextView = itemView.findViewById(www.smktelkommalang.sch.id.rental_room.R.id.kapasitasRuangan)
-        val ukuranTextView: TextView = itemView.findViewById(www.smktelkommalang.sch.id.rental_room.R.id.ukuranRuangan)
+        val imageView: ImageView =
+            itemView.findViewById(R.id.gambarRuangan)
+        val titleTextView: TextView =
+            itemView.findViewById(R.id.titleRuangan)
+        val kapasitasTextView: TextView =
+            itemView.findViewById(R.id.kapasitasRuangan)
+        val ukuranTextView: TextView =
+            itemView.findViewById(R.id.ukuranRuangan)
     }
 }
