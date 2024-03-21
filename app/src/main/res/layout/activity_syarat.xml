@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.FragmentRuangan.DetailRuangan.SyaratActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3643FF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/candy_background_1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/candy_background_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="Syarat dan Kesepakatan"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:scrollbarStyle="insideOverlay"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="4dp"
+            app:tabInlineLabel="true"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget">
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+            <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" • Ruangan hanya dapat dipinjam oleh pengguna yang telah terdaftar dan memiliki akun aktif.\n • Peminjaman ruangan harus dilakukan melalui aplikasi kami dan mengikuti prosedur yang telah ditetapkan. \n • Waktu peminjaman ruangan harus sesuai dengan ketentuan yang telah ditetapkan oleh pihak pengelola ruangan.
+                            \n • Biaya peminjaman ruangan akan ditetapkan berdasarkan jenis ruangan dan durasi peminjaman. \n • Pembayaran harus dilakukan sebelum atau pada saat peminjaman ruangan dilakukan. \n • Pembayaran yang telah dilakukan tidak dapat dikembalikan kecuali ada ketentuan lain yang telah disepakati.
+                            \n • Pengguna bertanggung jawab penuh atas segala kegiatan yang terjadi selama peminjaman ruangan. \n • Pengguna harus menjaga kebersihan dan keamanan ruangan yang dipinjam. \n • Kerusakan atau kehilangan yang terjadi selama peminjaman ruangan akan menjadi tanggung jawab pengguna dan dapat dikenakan biaya tambahan.  "
+                android:textSize="16dp"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+            android:id="@+id/my_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="saya menyetujui syarat dan ketentuan "
+                />
+
+            <Button
+                android:id="@+id/continue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Lanjutkan" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
