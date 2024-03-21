@@ -7,23 +7,35 @@
     android:background="#3643FF"
     tools:context=".ViewModel.Authenticate.Login.LoginActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></LinearLayout>
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="-20dp"
-        android:background="@drawable/candy_background_profile_1"></ImageView>
+        android:background="@drawable/candy_background_profile_1" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/candy_background_profile_2"></ImageView>
+        android:background="@drawable/candy_background_profile_2" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="200dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cvi_user"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:background="@drawable/ic_account_circle" />
+
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,31 +56,19 @@
         </TextView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:cardCornerRadius="200dp">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/cvi_user"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:background="@drawable/ic_account_circle" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginTop="-15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="-30dp"
             android:background="@color/white"
             app:cardCornerRadius="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical"
                 android:padding="30dp">
 
@@ -83,6 +83,7 @@
                         android:id="@+id/edt_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
                         android:text="username"
                         android:textColor="@color/black"
                         android:textSize="18dp"
@@ -92,6 +93,7 @@
                         android:id="@+id/edt_email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
                         android:text="Email@mail.com"
                         android:textColor="@color/black"
                         android:textSize="18dp" />
@@ -101,8 +103,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Akun"
-                    android:textSize="16dp"
-                    android:textColor="@color/black"></TextView>
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
 
                 <Button
                     android:id="@+id/btn_verify"
@@ -145,8 +147,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="20dp"
                     android:text="Umum"
-                    android:textSize="16dp"
-                    android:textColor="@color/black"></TextView>
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
 
                 <Button
                     android:id="@+id/btn_bantuan"
@@ -171,31 +173,28 @@
                     android:textAlignment="textStart"
                     android:textAllCaps="false" />
 
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btn_logout"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:backgroundTint="#CC000E"
-                    app:cardCornerRadius="30dp">
+                    android:outlineAmbientShadowColor="@android:color/transparent"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    app:cardCornerRadius="30dp"
+                    app:strokeColor="#CC000E"
+                    app:strokeWidth="1dp">
 
-                    <androidx.cardview.widget.CardView
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="1dp"
-                        app:cardCornerRadius="30dp">
+                        android:gravity="center"
+                        android:text="Keluar"
+                        android:textColor="#CC000E"
+                        android:textSize="16dp"
+                        android:textStyle="bold">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:text="Keluar"
-                            android:textColor="#CC000E"
-                            android:textSize="16dp"
-                            android:textStyle="bold">
+                    </TextView>
 
-                        </TextView>
-                    </androidx.cardview.widget.CardView>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
 
 
             </LinearLayout>
