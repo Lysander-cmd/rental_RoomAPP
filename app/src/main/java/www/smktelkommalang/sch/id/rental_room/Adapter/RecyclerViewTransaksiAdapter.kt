@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.google.android.material.card.MaterialCardView
 import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 import www.smktelkommalang.sch.id.rental_room.R
 
@@ -25,7 +27,7 @@ class RecyclerViewTransaksiAdapter(private val transaksiDataList: ArrayList<Tran
         val timeTextView: TextView = itemView.findViewById(R.id.jamPesanRuangan)
         val statusTextView: TextView = itemView.findViewById(R.id.statusPesanan)
         val textColor: TextView = itemView.findViewById(R.id.statusPesanan)
-        val cardColor: CardView = itemView.findViewById(R.id.cardViewStatusPesanan)
+        val cardColor: MaterialCardView = itemView.findViewById(R.id.cardViewStatusPesanan)
     }
     
     override fun getItemCount(): Int {
@@ -34,20 +36,29 @@ class RecyclerViewTransaksiAdapter(private val transaksiDataList: ArrayList<Tran
     
     override fun onBindViewHolder(holder: RuanganViewHolder, position: Int) {
         val transaksi = transaksiDataList[position]
-        transaksi.image?.let { holder.imageView.setImageResource(it) }
-        holder.titleTextView.text = transaksi.title
+        
         holder.dateTextView.text = transaksi.date
-        holder.timeTextView.text = transaksi.time
+        Glide.with(holder.itemView.context.applicationContext)
+            .load(transaksi.image)
+            .placeholder(R.drawable.logo)
+            .into(holder.imageView)
         holder.statusTextView.text = transaksi.status
-        if (holder.statusTextView.text == "Disetujui") {
-            holder.cardColor.setCardBackgroundColor(Color.parseColor("#0ECC00"));
-            holder.textColor.setTextColor(Color.parseColor("#0ECC00"));
-        } else if (holder.statusTextView.text == "Tidak Disetujui") {
-            holder.cardColor.setCardBackgroundColor(Color.parseColor("#CC000E"));
-            holder.textColor.setTextColor(Color.parseColor("#CC000E"));
-        } else {
-            holder.cardColor.setCardBackgroundColor(Color.parseColor("#3643FF"));
-            holder.textColor.setTextColor(Color.parseColor("#3643FF"));
+        holder.timeTextView.text = transaksi.time
+        holder.titleTextView.text = transaksi.title
+        
+        when (holder.statusTextView.text) {
+            "Disetujui" -> {
+                holder.cardColor.strokeColor = Color.parseColor("#0ECC00")
+                holder.textColor.setTextColor(Color.parseColor("#0ECC00"))
+            }
+            "Tidak Disetujui" -> {
+                holder.cardColor.strokeColor = Color.parseColor("#CC000E")
+                holder.textColor.setTextColor(Color.parseColor("#CC000E"))
+            }
+            else -> {
+                holder.cardColor.strokeColor = Color.parseColor("#3643FF")
+                holder.textColor.setTextColor(Color.parseColor("#3643FF"))
+            }
         }
     }
 }

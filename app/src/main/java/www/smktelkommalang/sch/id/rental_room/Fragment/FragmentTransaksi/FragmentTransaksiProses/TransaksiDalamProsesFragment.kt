@@ -13,12 +13,12 @@ import www.smktelkommalang.sch.id.rental_room.Database.TransaksiDatabase
 import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 import www.smktelkommalang.sch.id.rental_room.R
 
-class TransaksiDalamProsesFragment() : Fragment() {
+class TransaksiDalamProsesFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var transaksiDataList: ArrayList<TransaksiData>
     private lateinit var recyclerViewTransaksiAdapter: RecyclerViewTransaksiAdapter
     private lateinit var transaksiDatabase: TransaksiDatabase
-    lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,45 +30,24 @@ class TransaksiDalamProsesFragment() : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         
-        transaksiDatabase = TransaksiDatabase()
         auth = FirebaseAuth.getInstance()
-        transaksiDatabase.getTransaksiData(userId = auth.currentUser?.uid.toString(), transaksiDataList)
+        transaksiDatabase = TransaksiDatabase()
+        transaksiDataList = ArrayList()
         
         recyclerViewTransaksiAdapter = RecyclerViewTransaksiAdapter(transaksiDataList)
         recyclerView.adapter = recyclerViewTransaksiAdapter
         
-        return rootView
+        readDataFromFirebase()
         
+        return rootView
     }
     
+    private fun readDataFromFirebase() {
+        val userId = auth.currentUser?.uid.toString()
+        transaksiDatabase.getTransaksiData(userId, arrayOf("Dalam proses")) { dataList ->
+            transaksiDataList.clear()
+            transaksiDataList.addAll(dataList)
+            recyclerViewTransaksiAdapter.notifyDataSetChanged()
+        }
+    }
 }
-
-//class TransaksiDalamProsesFragment : Fragment() {
-//    private lateinit var recyclerView: RecyclerView
-//    private var transaksiDataList = MutableLiveData<ArrayList<TransaksiData>>()
-//    private lateinit var recyclerViewTransaksiAdapter: RecyclerViewTransaksiAdapter
-//    private lateinit var transaksiDatabase: TransaksiDatabase
-//    private lateinit var auth: FirebaseAuth
-//
-//    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-//        val rootView = inflater.inflate(R.layout.fragment_transaksi_dalam_proses, container, false)
-//
-//        auth = FirebaseAuth.getInstance()
-//        transaksiDatabase = TransaksiDatabase()
-//
-//        recyclerView = rootView.findViewById(R.id.transaksiDalamProses)
-//        recyclerView.setHasFixedSize(true)
-//        recyclerView.layoutManager = LinearLayoutManager(context)
-//
-//        transaksiDataList.observe(viewLifecycleOwner) { dataList ->
-//            recyclerViewTransaksiAdapter = RecyclerViewTransaksiAdapter(dataList)
-//            recyclerView.adapter = recyclerViewTransaksiAdapter
-//        }
-//
-//        auth.currentUser?.uid?.let {
-//            transaksiDatabase.getTransaksiData(it, transaksiDataList)
-//        }
-//
-//        return rootView
-//        }
-//}

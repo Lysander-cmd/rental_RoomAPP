@@ -15,7 +15,7 @@ import www.smktelkommalang.sch.id.rental_room.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
-    lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -35,8 +35,8 @@ class LoginActivity : AppCompatActivity() {
         }
         
         binding.btnLogin.setOnClickListener {
-            val email = binding.edtEmailLogin.text.toString()
-            val password = binding.edtPasswordLogin.text.toString()
+            val email = binding.edtEmailLogin.text.toString().trim()
+            val password = binding.edtPasswordLogin.text.toString().trim()
             
             //Validasi email
             if (email.isEmpty()) {
@@ -59,11 +59,11 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             
-            LoginFirebase(email, password)
+            loginFirebase(email, password)
         }
     }
     
-    private fun LoginFirebase(email: String, password: String) {
+    private fun loginFirebase(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {

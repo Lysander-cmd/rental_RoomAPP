@@ -1,11 +1,10 @@
 package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiSelesai
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.MutableLiveData
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -19,7 +18,7 @@ class TransaksiSelesaiFragment : Fragment() {
     private lateinit var transaksiDataList: ArrayList<TransaksiData>
     private lateinit var recyclerViewTransaksiAdapter: RecyclerViewTransaksiAdapter
     private lateinit var transaksiDatabase: TransaksiDatabase
-    lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,43 +30,31 @@ class TransaksiSelesaiFragment : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         
-        transaksiDatabase = TransaksiDatabase()
         auth = FirebaseAuth.getInstance()
-        transaksiDatabase.getTransaksiData(userId = auth.currentUser?.uid.toString(), transaksiDataList)
+        transaksiDatabase = TransaksiDatabase()
+        transaksiDataList = ArrayList()
         
         recyclerViewTransaksiAdapter = RecyclerViewTransaksiAdapter(transaksiDataList)
         recyclerView.adapter = recyclerViewTransaksiAdapter
         
+        readDataFromFirebase()
         return rootView
     }
+    
+    private fun readDataFromFirebase() {
+        val userId = auth.currentUser?.uid.toString()
+        /*
+        clear ini sama aj kek hapus semua variabel yg kesimpen di array, tujuannya biar ga ke duplicate
+        
+        addAll ini awalnya dataList yg udh ad isinya trus mo dikasih ke transaksiDataList
+        biar bs ditampilin datanya, nah trus jgn lupa .notifyDataSetChanged() ke adapternya
+        
+        klo arrayOf ini aku pengen ngecek 2 status sekaligus di firebase, jdnya pake array
+         */
+        transaksiDatabase.getTransaksiData(userId, arrayOf( "Disetujui", "Tidak Disetujui" )) { dataList ->
+            transaksiDataList.clear()
+            transaksiDataList.addAll(dataList)
+            recyclerViewTransaksiAdapter.notifyDataSetChanged()
+        }
+    }
 }
-
-//class TransaksiSelesaiFragment : Fragment() {
-//    private lateinit var recyclerView: RecyclerView
-//    private var transaksiDataList = MutableLiveData<ArrayList<TransaksiData>>()
-//    private lateinit var recyclerViewTransaksiAdapter: RecyclerViewTransaksiAdapter
-//    private lateinit var transaksiDatabase: TransaksiDatabase
-//    private lateinit var auth: FirebaseAuth
-//
-//    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-//        val rootView = inflater.inflate(R.layout.fragment_transaksi_dalam_proses, container, false)
-//
-//        auth = FirebaseAuth.getInstance()
-//        transaksiDatabase = TransaksiDatabase()
-//
-//        recyclerView = rootView.findViewById(R.id.transaksiDalamProses)
-//        recyclerView.setHasFixedSize(true)
-//        recyclerView.layoutManager = LinearLayoutManager(context)
-//
-//        transaksiDataList.observe(viewLifecycleOwner) { dataList ->
-//            recyclerViewTransaksiAdapter = RecyclerViewTransaksiAdapter(dataList)
-//            recyclerView.adapter = recyclerViewTransaksiAdapter
-//        }
-//
-//        auth.currentUser?.uid?.let {
-//            transaksiDatabase.getTransaksiData(it, transaksiDataList)
-//        }
-//
-//        return rootView
-//    }
-//}

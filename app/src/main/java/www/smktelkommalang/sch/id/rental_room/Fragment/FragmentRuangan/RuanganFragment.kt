@@ -48,13 +48,13 @@ class RuanganFragment : Fragment() {
     private fun prepareMovieListData() {
         // Use a background thread for data preparation
         viewLifecycleOwner.lifecycleScope.launch {
-            val movieData = listOf(
-                RuanganData(R.drawable.dummy_ruangan_1, "20 Orang", "10x10", "Peminjaman Gedung Auditorium G2",   "Dalam Proses"),
-                RuanganData(R.drawable.dummy_ruangan_2, "20 Orang", "10x10", "Peminjaman Gedung Auditorium G2",   "Dalam Proses"),
-                RuanganData(R.drawable.dummy_ruangan_3, "20 Orang", "10x10", "Peminjaman Gedung Auditorium G2",   "Dalam Proses")
-
-            )
-            movieList.postValue(movieData)
+//            val movieData = listOf(
+//                RuanganData("", "20 Orang", "10x10", "Peminjaman Gedung Auditorium G2",   "Dalam Proses"),
+//                RuanganData("", "20 Orang", "10x10", "Peminjaman Gedung Auditorium G2",   "Dalam Proses"),
+//                RuanganData("", "20 Orang", "10x10", "Peminjaman Gedung Auditorium G2",   "Dalam Proses")
+//
+//            )
+//            movieList.postValue(movieData)
         }
     }
 }
