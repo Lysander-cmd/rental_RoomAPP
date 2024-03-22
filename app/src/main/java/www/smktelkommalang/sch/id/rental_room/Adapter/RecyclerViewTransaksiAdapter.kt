@@ -1,5 +1,6 @@
 package www.smktelkommalang.sch.id.rental_room.Adapter
 
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.card.MaterialCardView
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiDetail.TransaksiDetailFragment
 import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 import www.smktelkommalang.sch.id.rental_room.R
 
@@ -65,6 +67,14 @@ class RecyclerViewTransaksiAdapter(private val transaksiDataList: ArrayList<Tran
         
         val cont = holder.transaksiCard.context
         holder.transaksiCard.setOnClickListener{
+            val intent = Intent(it.context, TransaksiDetailFragment::class.java)
+            
+            intent.putExtra("title", transaksi.title)
+            intent.putExtra("date", transaksi.date)
+            intent.putExtra("time", transaksi.time)
+            
+            it.context.startActivity(intent)
+            
             Toast.makeText(cont, "The item ${transaksi.title} is clicked", Toast.LENGTH_SHORT).show()
         }
     }

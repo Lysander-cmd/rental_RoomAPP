@@ -5,10 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import com.bumptech.glide.Glide
 import www.smktelkommalang.sch.id.rental_room.R
 
 class TransaksiDetailFragment : Fragment() {
-    
     
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

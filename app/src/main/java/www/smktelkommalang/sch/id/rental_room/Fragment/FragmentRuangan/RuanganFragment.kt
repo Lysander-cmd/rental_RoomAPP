@@ -41,7 +41,8 @@ class RuanganFragment : Fragment() {
         adapter = RecyclerViewRuanganAdapter(movieList)
         adapter.setOnItemClickListener { ruanganData ->
             val intent = Intent(requireContext(), DetailRuanganActivity::class.java)
-            intent.putExtra("ruanganData", ruanganData)
+            val modifiedTitle = ruanganData.title.replace(".", " ")
+            intent.putExtra("title", modifiedTitle)
             startActivity(intent)
         }
         val layoutManager = GridLayoutManager(context, 2)
