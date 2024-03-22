@@ -2,4 +2,14 @@
     <string name="app_name">ReservU</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_ruangan_detail">• Ruangan hanya dapat dipinjam oleh pengguna yang telah terdaftar dan memiliki akun aktif.\n
+• Peminjaman ruangan harus dilakukan melalui aplikasi kami dan mengikuti prosedur yang telah ditetapkan.\n
+• Waktu peminjaman ruangan harus sesuai dengan ketentuan yang telah ditetapkan oleh pihak pengelola ruangan.\n
+• Biaya peminjaman ruangan akan ditetapkan berdasarkan jenis ruangan dan durasi peminjaman.\n
+• Pembayaran harus dilakukan sebelum atau pada saat peminjaman ruangan dilakukan.\n
+• Pembayaran yang telah dilakukan tidak dapat dikembalikan kecuali ada ketentuan lain yang telah disepakati.\n
+• Pengguna bertanggung jawab penuh atas segala kegiatan yang terjadi selama peminjaman ruangan.\n
+• Pengguna harus menjaga kebersihan dan keamanan ruangan yang dipinjam.\n
+• Kerusakan atau kehilangan yang terjadi selama peminjaman ruangan akan menjadi tanggung jawab pengguna dan dapat dikenakan biaya tambahan.</string>
+    \n
 </resources>

@@ -5,12 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Fragment.FragmentRuangan.DetailRuangan.SyaratActivity">
+    tools:context=".Fragment.FragmentRuangan.DetailRuangan.QRActivity"
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="110dp"
         android:background="#3643FF">
 
         <RelativeLayout
@@ -36,9 +36,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:text="Syarat dan Kesepakatan"
+                android:text="Detail Peminjaman"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
@@ -59,37 +59,85 @@
         </com.google.android.material.tabs.TabLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
+            android:orientation="vertical">
             <TextView
-                android:id="@+id/text_view"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:text="Kode Peminjaman Anda : "
+                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:lineSpacingExtra="4dp"
-                android:text="@string/text_ruangan_detail" />
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GAG-281024"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:textColor="@color/blue_3643FF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Silahkan lanjutkan ke WhatsApp untuk melakukan pembayaran dan keperluan transaksi lainnya."
+                android:textColor="@color/black"/>
 
-            <CheckBox
-            android:id="@+id/my_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="saya menyetujui syarat dan ketentuan "
-                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:dividerColor="#95969D" />
+
+                <TextView
+                    android:id="@+id/sep_text"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/white"
+                    android:fontFamily="casual"
+                    android:text="atau"
+                    android:textAlignment="center"
+                    android:textColor="#95969D"
+                    android:textSize="11dp" />
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Scan QR Code di bawah ini:"
+                android:textColor="@color/black"/>
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/qr"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+
+            android:padding="30dp">
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/btn_ajukanNext"
+                android:id="@+id/btn_kembaliBeranda"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:outlineAmbientShadowColor="@android:color/transparent"
@@ -98,13 +146,13 @@
                 app:strokeColor="@color/blue_3643FF"
                 app:strokeWidth="1dp"
                 app:cardBackgroundColor="@color/blue_3643FF"
-                android:onClick="onButtonAjukanClicked">
+                android:onClick="onButtonKembaliClicked">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Ajukan Peminjaman"
+                    android:text="Kembali Ke Beranda"
                     android:textColor="@color/white"
                     android:textSize="16dp"
                     android:textStyle="bold">
@@ -112,12 +160,8 @@
                 </TextView>
 
             </com.google.android.material.card.MaterialCardView>
-
-
-
+        </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-
 
 </LinearLayout>

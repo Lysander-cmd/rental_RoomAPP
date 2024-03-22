@@ -7,16 +7,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentBeranda.BerandaFragment
 import www.smktelkommalang.sch.id.rental_room.R
 
-class DetailRuanganActivity : AppCompatActivity() {
+class QRActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_ruangan)
-    }
+        setContentView(R.layout.activity_qractivity)
 
-    fun onButtonAjukanClicked(view: View) {
-        val intent = Intent(this, PemesananDetail::class.java)
+    }
+    fun onButtonKembaliClicked(view: View) {
+        // Buat Intent untuk memulai aktivitas baru (activity_pemesanan_detail.xml)
+        val intent = Intent(this, BerandaFragment::class.java)
         startActivity(intent)
     }
 }
