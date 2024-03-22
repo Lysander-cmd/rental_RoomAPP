@@ -43,6 +43,9 @@ class RuanganFragment : Fragment() {
             val intent = Intent(requireContext(), DetailRuanganActivity::class.java)
             val modifiedTitle = ruanganData.title.replace(".", " ")
             intent.putExtra("title", modifiedTitle)
+            intent.putExtra("image", ruanganData.image)
+            intent.putExtra("kapasitas", ruanganData.kapasitas)
+            intent.putExtra("ukuran", ruanganData.ukuran)
             startActivity(intent)
         }
         val layoutManager = GridLayoutManager(context, 2)

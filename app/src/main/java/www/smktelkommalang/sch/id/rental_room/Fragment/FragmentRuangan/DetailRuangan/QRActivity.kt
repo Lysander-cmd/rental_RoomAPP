@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentBeranda.BerandaFragment
 import www.smktelkommalang.sch.id.rental_room.R
 
@@ -20,5 +22,6 @@ class QRActivity : AppCompatActivity() {
         // Buat Intent untuk memulai aktivitas baru (activity_pemesanan_detail.xml)
         val intent = Intent(this, BerandaFragment::class.java)
         startActivity(intent)
+        finish()
     }
 }

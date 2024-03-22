@@ -14,8 +14,12 @@ import www.smktelkommalang.sch.id.rental_room.Database.RuanganDatabase
 import www.smktelkommalang.sch.id.rental_room.R
 
 class DetailRuanganActivity : AppCompatActivity() {
-    
     private lateinit var ruanganDB: RuanganDatabase
+    private lateinit var ruanganTitle: String
+    private lateinit var ruanganImage: String
+    private lateinit var ruanganKapasitas: String
+    private lateinit var ruanganUkuran: String
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_ruangan)
@@ -25,7 +29,11 @@ class DetailRuanganActivity : AppCompatActivity() {
         val deskripsi = findViewById<TextView>(R.id.descriptionroom)
         val harga = findViewById<TextView>(R.id.harga)
         
-        val ruanganTitle = intent.getStringExtra("title") ?: ""
+        ruanganTitle = intent.getStringExtra("title") ?: ""
+        ruanganImage = intent.getStringExtra("image") ?: ""
+        ruanganKapasitas = intent.getStringExtra("kapasitas") ?: ""
+        ruanganUkuran = intent.getStringExtra("ukuran") ?: ""
+        
         ruanganDB = RuanganDatabase()
         ruanganDB.getRuanganDetailData(ruanganTitle) { ruanganDataList ->
             if (ruanganDataList.isNotEmpty()) {
@@ -42,9 +50,13 @@ class DetailRuanganActivity : AppCompatActivity() {
             }
         }
     }
-
+    
     fun onButtonAjukanClicked(view: View) {
         val intent = Intent(this, PemesananDetail::class.java)
+        intent.putExtra("title", ruanganTitle)
+        intent.putExtra("image", ruanganImage)
+        intent.putExtra("kapasitas", ruanganKapasitas)
+        intent.putExtra("ukuran", ruanganUkuran)
         startActivity(intent)
     }
 }

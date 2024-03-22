@@ -39,7 +39,7 @@ class TransaksiDatabase {
     buat contoh bs buka TransaksiData.kt
      */
     
-    fun createTransaksi(image: String, title: String, date: String, time: String, status: String) {
+    fun createTransaksi(image: String, title: String, date: String, time: String, status: String, keperluan: String, peminjam: String) {
         db = FirebaseDatabase.getInstance().reference
         val transaksiRef = db.child("transaksi").child(auth.currentUser?.uid.toString()).push()
         transaksiRef.child("title").setValue(title.trim())
@@ -47,6 +47,8 @@ class TransaksiDatabase {
         transaksiRef.child("time").setValue(time.trim())
         transaksiRef.child("status").setValue(status.trim())
         transaksiRef.child("image").setValue(image.trim())
+        transaksiRef.child("keperluan").setValue(keperluan.trim())
+        transaksiRef.child("peminjam").setValue(peminjam.trim())
     }
     
     fun getTransaksiData(
