@@ -6,63 +6,65 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ViewModel.Authenticate.Opening.OpeningActivity">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <Button
-        android:id="@+id/btn_skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:layout_gravity="end"
-        android:background="@android:color/transparent"
-        android:text="Lewati"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textColor="@color/blue_3643FF" />
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_marginVertical="30dp" />
+        android:layout_height="wrap_content">
 
-    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-        android:id="@+id/dotsIndicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="160dp"
-        android:layout_marginBottom="70dp"
-        app:dotsClickable="false"
-        app:dotsColor="@color/grey_cacace"
-        app:dotsSize="13dp"
-        app:dotsSpacing="3dp"
-        app:selectedDotColor="@color/blue_3643FF" />
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        app:cardCornerRadius="30dp">
-
-        <Button
-            android:id="@+id/btn_next"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#3643FF"
-            android:text="Selanjutnya"
-            android:fontFamily="@font/poppins_bold"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
-</LinearLayout>
-</ScrollView>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins"
+                android:text="Lewati"
+                android:textAllCaps="false"
+                android:textColor="@color/blue_3643FF"
+                android:textStyle="bold" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"/>
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dotsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="100dp"
+                android:layout_marginBottom="70dp"
+                app:dotsClickable="false"
+                app:dotsColor="@color/grey_cacace"
+                app:dotsSize="10dp"
+                app:dotsSpacing="3dp"
+                app:selectedDotColor="@color/blue_3643FF" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="30dp">
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#3643FF"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Selanjutnya"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

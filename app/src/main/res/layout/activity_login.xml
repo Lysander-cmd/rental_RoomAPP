@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    android:padding="60dp"
+    android:paddingHorizontal="35dp"
+    android:paddingTop="35dp"
     tools:context=".ViewModel.Authenticate.Login.LoginActivity">
 
     <LinearLayout
@@ -25,40 +26,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
+            android:fontFamily="@font/poppins_bold"
             android:text="@string/app_name"
             android:textAlignment="center"
             android:textColor="#3643FF"
-            android:textSize="32sp"
+            android:textSize="28sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppins_bold"
         android:text="Selamat Datang Kembali!"
         android:textColor="#3341FF"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Masuk ke akun untuk melanjutkan"
         android:textColor="#95969D"
         android:textSize="14sp" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:outlineSpotShadowColor="@color/white"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="8dp"
         app:strokeColor="#95969D"
-        app:strokeWidth="2dp">
+        app:strokeWidth="1dp">
 
         <Button
             android:id="@+id/btnlLoginGoogle"
@@ -66,8 +69,8 @@
             android:layout_height="match_parent"
             android:background="@color/white"
             android:drawableStart="@drawable/googleg_standard_color_18"
-            android:paddingHorizontal="50dp"
-            android:text="Masuk dengan Google"
+            android:paddingHorizontal="35dp"
+            android:text="Masuk dengan google"
             android:textAllCaps="false"
             android:textColor="#95969D"
             android:textStyle="bold" />
@@ -75,13 +78,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="65dp">
 
         <com.google.android.material.divider.MaterialDivider
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            app:dividerColor="#95969D" />
+            app:dividerColor="@color/grey_cacace" />
 
         <TextView
             android:id="@+id/sep_text"
@@ -90,7 +93,7 @@
             android:layout_centerInParent="true"
             android:layout_marginHorizontal="10dp"
             android:background="@color/white"
-            android:fontFamily="casual"
+            android:fontFamily="@font/poppins_semibold"
             android:text="atau"
             android:textAlignment="center"
             android:textColor="#95969D"
@@ -101,20 +104,21 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="15dp"
         android:outlineSpotShadowColor="@color/white"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="8dp"
         app:strokeColor="#D4E5E7"
         app:strokeWidth="1dp">
 
         <EditText
             android:id="@+id/edt_email_login"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:background="@color/white"
+            android:fontFamily="@font/poppins"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:padding="10dp"
+            android:padding="5dp"
             android:textColorHint="#95969D" />
 
     </com.google.android.material.card.MaterialCardView>
@@ -122,9 +126,8 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:outlineSpotShadowColor="@color/white"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="8dp"
         app:strokeColor="#D4E5E7"
         app:strokeWidth="1dp">
 
@@ -137,11 +140,12 @@
             <EditText
                 android:id="@+id/edt_password_login"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
+                android:fontFamily="@font/poppins"
                 android:hint="Kata Sandi"
                 android:inputType="textPassword"
-                android:padding="10dp"
+                android:padding="5dp"
                 android:textColorHint="#95969D" />
         </com.google.android.material.textfield.TextInputLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -151,6 +155,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
+        android:fontFamily="@font/poppins"
         android:text="Lupa kata sandi?"
         android:textAlignment="textEnd"
         android:textColor="#3643FF"
@@ -172,7 +177,7 @@
             android:text="Masuk"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
@@ -186,6 +191,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
+            android:fontFamily="@font/poppins"
             android:text="Belum memiliki akun?"
             android:textAlignment="center"
             android:textColor="#95969D"
@@ -197,6 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
             android:backgroundTint="@color/black"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Daftar"
             android:textAlignment="center"
             android:textColor="#3643FF"
