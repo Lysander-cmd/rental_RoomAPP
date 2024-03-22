@@ -2,7 +2,11 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("com.google.gms.google-services")
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+
 }
+
 
 android {
     compileSdk 34
@@ -73,6 +77,5 @@ dependencies {
 
     //Load Image Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
-
 
 }

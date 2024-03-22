@@ -1,5 +1,6 @@
 package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentRuangan
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.launch
 import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewRuanganAdapter
 import www.smktelkommalang.sch.id.rental_room.Database.RuanganDatabase
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentRuangan.DetailRuangan.DetailRuanganActivity
 import www.smktelkommalang.sch.id.rental_room.Model.Ruangan.RuanganData
 import www.smktelkommalang.sch.id.rental_room.R
 
@@ -37,7 +39,11 @@ class RuanganFragment : Fragment() {
         ruanganDatabase = RuanganDatabase()
         recyclerView = view.findViewById(R.id.ruangan)
         adapter = RecyclerViewRuanganAdapter(movieList)
-        
+        adapter.setOnItemClickListener { ruanganData ->
+            val intent = Intent(requireContext(), DetailRuanganActivity::class.java)
+            intent.putExtra("ruanganData", ruanganData)
+            startActivity(intent)
+        }
         val layoutManager = GridLayoutManager(context, 2)
         recyclerView!!.layoutManager = layoutManager
         recyclerView!!.adapter = adapter
