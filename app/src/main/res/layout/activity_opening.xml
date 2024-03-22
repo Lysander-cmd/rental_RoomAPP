@@ -38,7 +38,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginHorizontal="100dp"
                 android:layout_marginBottom="70dp"
                 app:dotsClickable="false"
                 app:dotsColor="@color/grey_cacace"
