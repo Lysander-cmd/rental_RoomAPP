@@ -10,36 +10,32 @@ import www.smktelkommalang.sch.id.rental_room.Model.Transaksi.TransaksiData
 class AdminDatabase {
     private lateinit var db: DatabaseReference
     
-    fun updateStatus(status: String, index: Int) {
+    fun updateStatus(status: String) {
         db = FirebaseDatabase.getInstance().reference
         val transaksiRef = db.child("transaksi")
         
-        transaksiRef.orderByKey().limitToFirst(index)
-            .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    var count = 0
-                    for (childSnapshot in dataSnapshot.children) {
-                        for (childSnapshot2 in childSnapshot.children) {
-                            if (++count == index) {
-                                // Buat map untuk meng-update status saja
-                                val updates = HashMap<String, Any>()
-                                updates["status"] = status.trim()
-                                
-                                // Update child node yang sesuai dengan map yang sudah dibuat
-                                transaksiRef.child(childSnapshot2.key.toString())
-                                    .updateChildren(updates)
-                                break
-                            }
+        transaksiRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (childSnapshot in dataSnapshot.children) {
+                    for (childSnapshot2 in childSnapshot.children) {
+                        if (childSnapshot2.child("status").getValue(String::class.java) == "Dalam Proses") {
+                            // Buat map untuk meng-update status
+                            val updates = HashMap<String, Any>()
+                            updates["status"] = status.trim()
+                            
+                            // Update child node yang memiliki status "Dalam Proses"
+                            transaksiRef.child(childSnapshot.key.toString())
+                                .child(childSnapshot2.key.toString())
+                                .updateChildren(updates)
                         }
-                        if (count == index) break
                     }
                 }
-                
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
-            })
-        
+            }
+            
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
     }
     
     fun getTransaksiData(

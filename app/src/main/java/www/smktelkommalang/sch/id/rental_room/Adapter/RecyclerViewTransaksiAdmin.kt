@@ -42,11 +42,11 @@ class RecyclerViewTransaksiAdmin(private val transaksiAdminActivityList: ArrayLi
         val adminDB: AdminDatabase  = AdminDatabase()
         
         holder.btnAccept.setOnClickListener{
-            adminDB.updateStatus("Disetujui", index = position + 1)
+            adminDB.updateStatus("Disetujui")
         }
         
         holder.btnDecline.setOnClickListener{
-            adminDB.updateStatus("Tidak Disetujui", index = position + 1)
+            adminDB.updateStatus("Tidak Disetujui")
         }
     }
     
