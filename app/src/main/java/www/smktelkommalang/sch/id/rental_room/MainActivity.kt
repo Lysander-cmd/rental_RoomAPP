@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentBeranda.BerandaFragment
+
+
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentProfile.ProfileFragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentRuangan.RuanganFragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.TransaksiFragment

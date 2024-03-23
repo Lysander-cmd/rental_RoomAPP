@@ -10,6 +10,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentBeranda.BerandaFragment
+import www.smktelkommalang.sch.id.rental_room.MainActivity
+
+
 import www.smktelkommalang.sch.id.rental_room.R
 
 class QRActivity : AppCompatActivity() {
@@ -17,10 +20,11 @@ class QRActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qractivity)
 
+
+
     }
     fun onButtonKembaliClicked(view: View) {
-        // Buat Intent untuk memulai aktivitas baru (activity_pemesanan_detail.xml)
-        val intent = Intent(this, BerandaFragment::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
     }
