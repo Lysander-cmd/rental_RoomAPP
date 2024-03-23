@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragment.FragmentRuangan.RuanganFragment">
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,66 +19,76 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="-10dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="-40dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/candy_background_1" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="-20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-40dp"
                 android:background="@drawable/candy_background_2" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="30dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Cari Ruangan"
+                    android:textColor="@color/grey_95969D"
+                    app:drawableStartCompat="@drawable/search" />
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:text="Ruangan"
+                android:layout_height="15dp"
+                android:layout_below="@+id/search"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:drawablePadding="10dp"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins"
+                android:text="Fakultas Ilmu Komputer"
                 android:textColor="@color/white"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                app:drawableEndCompat="@drawable/baseline_arrow_drop_down_24"
+                app:drawableStartCompat="@drawable/location"
+                app:drawableTint="@color/white" />
 
         </RelativeLayout>
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="50dp"
-            android:scrollbarStyle="insideOverlay"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@color/white"
-            app:tabIndicatorHeight="4dp"
-            app:tabInlineLabel="true"
-            app:tabMode="fixed"
-            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget">
-
-        </com.google.android.material.tabs.TabLayout>
-
     </com.google.android.material.appbar.AppBarLayout>
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
-    <GridLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="1">
+        android:layout_height="wrap_content">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/ruangan"
-            android:layout_margin="10dp"
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/fragment_ruangan_card" />
-    </GridLayout>
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="1">
 
-</ScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ruangan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/fragment_ruangan_card" />
+        </GridLayout>
+    </ScrollView>
 </LinearLayout>
