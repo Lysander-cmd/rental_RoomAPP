@@ -68,7 +68,8 @@
             android:orientation="vertical"
             android:layout_gravity="center"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="80dp">
             <TextView
                 android:id="@+id/text_view"
                 android:layout_width="wrap_content"
