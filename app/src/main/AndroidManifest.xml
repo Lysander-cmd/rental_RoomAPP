@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Rental_Room"
         tools:targetApi="31">
         <activity
+            android:name=".Fragment.FragmentBeranda.AlurActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentBeranda.KetentuanActivity"
+            android:exported="false" />
+        <activity
             android:name=".Fragment.FragmentBeranda.SliderBeranda"
             android:exported="false" />
         <activity
