@@ -20,15 +20,15 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="-10dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="-40dp"
                 android:background="@drawable/candy_background_1" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="-20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-40dp"
                 android:background="@drawable/candy_background_2" />
 
             <TextView
@@ -36,17 +36,17 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:text="Transaksi"
+                android:text="Admin"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="-20dp"
             android:layout_marginHorizontal="50dp"
             android:scrollbarStyle="insideOverlay"
             app:tabGravity="fill"
@@ -57,14 +57,10 @@
             app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget">
 
         </com.google.android.material.tabs.TabLayout>
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
-
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </androidx.viewpager.widget.ViewPager>
+        android:layout_height="match_parent" />
 </LinearLayout>

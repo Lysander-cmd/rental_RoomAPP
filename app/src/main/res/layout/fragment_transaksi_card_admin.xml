@@ -20,20 +20,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/gambarRuangan"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@color/cardview_dark_background"
-                android:importantForAccessibility="no"
-                android:importantForAutofill="yes"
-                android:scaleType="centerCrop" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                app:cardCornerRadius="10dp">
 
-            <LinearLayout
+                <ImageView
+                    android:id="@+id/gambarRuangan"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@null"
+                    android:importantForAccessibility="no"
+                    android:importantForAutofill="yes"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical">
+                android:layout_marginStart="10dp">
 
                 <TextView
                     android:id="@+id/namaRuangan"
@@ -41,54 +47,38 @@
                     android:layout_height="wrap_content"
                     android:text="Ruangan ...."
                     android:textColor="@color/black"
-                    android:textStyle="bold"
+                    android:textStyle="bold" />
 
-                    />
+                <TextView
+                    android:id="@+id/tanggalPesanRuangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:drawablePadding="5dp"
+                    android:text="DD MM YYYY"
+                    android:textSize="10dp"
+                    app:drawableLeftCompat="@drawable/outline_calendar_today" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom">
-
-                    <ImageView
-                        android:layout_width="19dp"
-                        android:layout_height="19dp"
-                        android:background="@drawable/outline_calendar_today"
-                        android:backgroundTint="#95969D"
-                        android:importantForAccessibility="no">
-
-                    </ImageView>
-
-                    <TextView
-                        android:id="@+id/tanggalPesanRuangan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="DD MM YYYY" />
-
-                    <ImageView
-                        android:layout_width="19dp"
-                        android:layout_height="19dp"
-                        android:layout_gravity="end|bottom"
-                        android:layout_marginStart="20dp"
-                        android:background="@drawable/clock"
-                        android:backgroundTint="#95969D"
-                        android:importantForAccessibility="no" />
-
-                    <TextView
-                        android:id="@+id/jamPesanRuangan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end|bottom"
-                        android:text="00.00 - 23.59" />
-                </LinearLayout>
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/jamPesanRuangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginStart="10dp"
+                    android:drawablePadding="5dp"
+                    android:text="00.00 - 23.59"
+                    android:textSize="10dp"
+                    app:drawableLeftCompat="@drawable/outline_clock" />
+            </RelativeLayout>
         </LinearLayout>
 
         <com.google.android.material.divider.MaterialDivider
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginVertical="10dp"
-            android:background="@color/cardview_dark_background" />
+            android:background="@color/black" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -98,24 +88,23 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:layout_margin="1dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/buttonAccept"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:background="@color/green"
                     android:text="Accept"
                     android:textColor="@color/white" />
+
                 <Button
                     android:id="@+id/buttonDecline"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:background="@color/red"
                     android:text="Decline"
                     android:textColor="@color/white" />

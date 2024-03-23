@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.Admin.TransaksiAccFragment
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiAcc.TransaksiAccFragment
 
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentTransaksi.FragmentTransaksiDone.TransaksiDoneFragment
 import www.smktelkommalang.sch.id.rental_room.databinding.FragmentHomeAdminBinding
