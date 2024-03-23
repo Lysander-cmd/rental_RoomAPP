@@ -14,13 +14,10 @@ import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 import www.smktelkommalang.sch.id.rental_room.Adapter.RecyclerViewRuanganAdapter
 import www.smktelkommalang.sch.id.rental_room.Adapter.ViewPagerAdapter
 import www.smktelkommalang.sch.id.rental_room.Database.RuanganDatabase
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentOpening.OpeningPage1Fragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentOpening.OpeningPage2Fragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentOpening.OpeningPage3Fragment
-import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentRuangan.DetailRuangan.PemesananDetail
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentBeranda.BerandaPage.BerandaPage1Fragment
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentBeranda.BerandaPage.BerandaPage2Fragment
 import www.smktelkommalang.sch.id.rental_room.Model.Ruangan.RuanganData
 import www.smktelkommalang.sch.id.rental_room.R
-import www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.Register.RegisterActivity
 
 class BerandaFragment : Fragment() {
     private lateinit var ruanganDatabase: RuanganDatabase
@@ -73,9 +70,8 @@ class BerandaFragment : Fragment() {
     private fun setupTab() {
         val adapter = ViewPagerAdapter(childFragmentManager)
         
-        adapter.addFragment(OpeningPage1Fragment(), "1st")
-        adapter.addFragment(OpeningPage2Fragment(), "2nd")
-        adapter.addFragment(OpeningPage3Fragment(), "3rd")
+        adapter.addFragment(BerandaPage1Fragment(), "1st")
+        adapter.addFragment(BerandaPage2Fragment(), "2nd")
         
         viewPager.adapter = adapter
         dotsIndicator.setViewPager(viewPager)
