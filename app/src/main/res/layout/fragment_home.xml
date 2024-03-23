@@ -1,74 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BerandaFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/BerandaFragment"
-    tools:context="Fragment.FragmentBeranda.BerandaFragment"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#3643FF">
+        android:background="#3643FF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/imageViewLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_marginTop="-10dp"
-                android:background="@drawable/candy_background_1" />
+                android:background="@drawable/candy_background_1"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/imageViewRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="-20dp"
-                android:background="@drawable/candy_background_2" />
+                android:background="@drawable/candy_background_2"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
+                android:id="@+id/ivProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ellipse_rofile"
-                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="70dp"
-                android:layout_alignParentLeft="true"/>
+                android:src="@drawable/ellipse_rofile"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
+                android:id="@+id/tvWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
-                android:layout_marginTop="70dp"
-                android:layout_alignParentLeft="true"
-                android:text="Selamat Datang,User"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="80dp"
+                android:text="Selamat Datang, User"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivProfile" />
+
             <TextView
+                android:id="@+id/tvFaculty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
-                android:layout_marginTop="90dp"
-                android:layout_alignParentLeft="true"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="95dp"
                 android:text="Fakultas Ilmu Komputer"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+                app:layout_constraintStart_toEndOf="@+id/ivProfile" />
+
             <ImageView
+                android:id="@+id/ivBell"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/mdi_bell_outline"
-                android:layout_marginLeft="350dp"
+                android:layout_marginStart="300dp"
                 android:layout_marginTop="80dp"
-                android:layout_alignParentLeft="true"/>
+                android:src="@drawable/mdi_bell_outline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
         </RelativeLayout>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="50dp"
             android:scrollbarStyle="insideOverlay"
@@ -77,12 +94,27 @@
             app:tabIndicatorHeight="4dp"
             app:tabInlineLabel="true"
             app:tabMode="fixed"
-            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget">
-
-        </com.google.android.material.tabs.TabLayout>
-
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:layout_constraintTop_toBottomOf="@+id/RelativeLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/SliderContainer">
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="80dp"
+            android:paddingEnd="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
 
-
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

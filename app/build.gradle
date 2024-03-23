@@ -40,6 +40,10 @@ android {
     namespace 'www.smktelkommalang.sch.id.rental_room'
 }
 
+
+
+
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.12.0'
@@ -77,5 +81,6 @@ dependencies {
 
     //Load Image Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
 
 }
