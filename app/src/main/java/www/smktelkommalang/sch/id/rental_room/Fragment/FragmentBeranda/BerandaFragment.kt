@@ -1,10 +1,12 @@
 package www.smktelkommalang.sch.id.rental_room.Fragment.FragmentBeranda
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
@@ -15,8 +17,10 @@ import www.smktelkommalang.sch.id.rental_room.Database.RuanganDatabase
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentOpening.OpeningPage1Fragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentOpening.OpeningPage2Fragment
 import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentOpening.OpeningPage3Fragment
+import www.smktelkommalang.sch.id.rental_room.Fragment.FragmentRuangan.DetailRuangan.PemesananDetail
 import www.smktelkommalang.sch.id.rental_room.Model.Ruangan.RuanganData
 import www.smktelkommalang.sch.id.rental_room.R
+import www.smktelkommalang.sch.id.rental_room.ViewModel.Authenticate.Register.RegisterActivity
 
 class BerandaFragment : Fragment() {
     private lateinit var ruanganDatabase: RuanganDatabase
@@ -42,10 +46,20 @@ class BerandaFragment : Fragment() {
         ruanganDatabase = RuanganDatabase()
         recyclerViewRuanganAdapter = RecyclerViewRuanganAdapter(ruanganDataList)
         recyclerView.adapter = recyclerViewRuanganAdapter
-        
+
+        rootView.findViewById<CardView>(R.id.information_card1).setOnClickListener {
+            val intent = Intent(requireContext(), KetentuanActivity::class.java)
+            startActivity(intent)
+        }
+
+        rootView.findViewById<CardView>(R.id.alur_card).setOnClickListener {
+            val intent = Intent(requireContext(), AlurActivity::class.java)
+            startActivity(intent)
+        }
         readDataFromFirebase()
         setupTab()
         return rootView
+
     }
     
     private fun readDataFromFirebase() {
@@ -66,4 +80,7 @@ class BerandaFragment : Fragment() {
         viewPager.adapter = adapter
         dotsIndicator.setViewPager(viewPager)
     }
+
+
+
 }
