@@ -1,6 +1,32 @@
 <resources>
-    <string name="app_name">rental_Room</string>
+    <string name="app_name">ReservU</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="default_web_client_id">41074420495-ko7c0psp8j2e5295hrl5ksdg4i44s0ko.apps.googleusercontent.com</string>
+    <string name="text_ruangan_detail">• Ruangan hanya dapat dipinjam oleh pengguna yang telah terdaftar dan memiliki akun aktif.\n
+• Peminjaman ruangan harus dilakukan melalui aplikasi kami dan mengikuti prosedur yang telah ditetapkan.\n
+• Waktu peminjaman ruangan harus sesuai dengan ketentuan yang telah ditetapkan oleh pihak pengelola ruangan.\n
+• Biaya peminjaman ruangan akan ditetapkan berdasarkan jenis ruangan dan durasi peminjaman.\n
+• Pembayaran harus dilakukan sebelum atau pada saat peminjaman ruangan dilakukan.\n
+• Pembayaran yang telah dilakukan tidak dapat dikembalikan kecuali ada ketentuan lain yang telah disepakati.\n
+• Pengguna bertanggung jawab penuh atas segala kegiatan yang terjadi selama peminjaman ruangan.\n
+• Pengguna harus menjaga kebersihan dan keamanan ruangan yang dipinjam.\n
+• Kerusakan atau kehilangan yang terjadi selama peminjaman ruangan akan menjadi tanggung jawab pengguna dan dapat dikenakan biaya tambahan.</string>
+    \n
+    <string name="text_ketentuan">Setiap LO/ LOF FILKOM UB periode 2024 dapat melakukan peminjaman ruang didasarkan untuk menunjang program kerja ataupun kepentingan LO/ LOF. \n
+Untuk penggunaan ruang kesekretariatan lembaga (Gedung GKM lt.2) di hari libur (Sabtu, Minggu, dan tanggal merah) harap membuat surat permohonan peminjaman ruang. \n
+Pemilihan jadwal peminjaman dapat dilakukan dengan ketentuan memilih jadwal yang kosong. \n
+Setiap peminjaman ruangan FILKOM mengharuskan adanya surat dan lampiran mengenai keterangan kegiatan yang akan dilaksanakan. Apabila tidak ada surat dan lampiran atau kegiatan yang dilaksanakan tidak sesuai dengan lampiran maka peminjam melanggar ketentuan peminjaman dan akan mendapatkan sanksi. \n
+Lampiran peminjaman ruang FILKOM mengharuskan adanya konsepan acara dengan menambahkan jumlah perkiraan mahasiswa yang akan hadir dan memenuhi ruangan GKM, beserta keperluan pendukung (misal : Kursi, proyektor, 1 set sound). \n
+Surat izin peminjaman ruang FILKOM mengharuskan tandatangan ketua pelaksana, ketua himpunan/ komunitas, dan presiden BEM sebagai persetujuan. \n
+Setelah sesi peminjaman berakhir, harap mengembalikan meja dan kursi yang digunakan dan mensterilkan ruangan 15 menit sebelum sesi berakhir. \n
+Perubahan/pembatalan jadwal dapat dilakukan selama pengajuan belum disetujui</string>
+
+    <string name="text_alur">Mencari ruangan yang ingin dipinjam pada navbar “ruangan”.\n
+Setelah memilih ruangan, pengguna dapat melihat detail pada ruangan untuk disesuaikan dengan kebutuhan.\n
+Jika ruangan yang dipilih sudah sesuai dengan kebutuhan, pengguna dapat mengklik button “pinjam sekarang” untuk melanjutkan peminjaman.\n
+Selanjutnya, pengguna dapat memilih jadwal dan mengisikan data untuk kebutuhan peminjaman.\n
+Setelah selesai melakukan pengisian data, pengguna akan diarahkan ke bagian admin untuk melakukan konfirmasi dan kebutuhan lainnya.\n
+Setelah selesai melakukan konfirmasi, pengguna dapat mengecek status peminjaman secara berkala atau menunggu notifikasi sampai pengajuan peminjaman di setujui.\n
+Pengguna dapat melakukan pembatalan dan perubahan jadwal status transaksi masih dalam proses.\n
+Setelah status pengajuan sudah disetujui, pengguna dapat menggunakan ruangan sesuai dengan jadwal yang telah ditentukan</string>
 </resources>

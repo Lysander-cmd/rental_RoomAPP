@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,29 +15,67 @@
         android:theme="@style/Theme.Rental_Room"
         tools:targetApi="31">
         <activity
+            android:name=".Fragment.FragmentBeranda.AlurActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentBeranda.KetentuanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentBeranda.SliderBeranda"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentBeranda.BerandaFragment"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentRuangan.DetailRuangan.QRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentRuangan.DetailRuangan.LoadingQRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentRuangan.DetailRuangan.SyaratActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentRuangan.DetailRuangan.PemesananDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragmentRuangan.DetailRuangan.DetailRuanganActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.Authenticate.Opening.OpeningActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Admin.ActivityAdminScreen"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen.SplashScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Fragment.FragmentProfile.ProfileFragment"
-            android:exported="false" />
-        <activity
-            android:name=".Model.ResetPassword.ResetPasswordActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Model.Register.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Model.Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            />
         </activity>
+        <activity
+            android:name=".Fragment.FragmentProfile.ProfileFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.Authenticate.ResetPassword.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.Authenticate.Register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.Authenticate.Login.LoginActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
